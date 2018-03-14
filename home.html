@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	<!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/dist/bulma-extensions.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css" integrity="sha256-gIdnnPD3ewV0jrly0gwJouPaaCV1EP7+rE7uqEah9zA=" crossorigin="anonymous" />
+  <style scoped>
+  .button{
+    box-sizing:border-box;
+  }
+  .box{
+    box-sizing:border-box;
+  }
+  .title.product-title{
+      margin-top:1rem;
+      line-height: 1.3rem; /* Sets line height to 1.5 times text size */
+      height: 2.6rem; /* Sets the div height to 2x line-height (3 times text size) */
+      width: 100%; /* Use whatever width you want */
+      white-space: normal; /* Wrap lines of text */
+      overflow: hidden; /* Hide text that goes beyond the boundaries of the div */
+      text-overflow: ellipsis; /* Ellipses (cross-browser) */
+      -o-text-overflow: ellipsis; /* Ellipses (cross-browser) */
+  }
+  .subtitle{
+      margin-bottom:1rem;
+  }
+  .prices{
+      display: flex;
+      justify-content: center; /* align horizontal */
+      align-items: center; /* align vertical */
+      margin-bottom:1rem;
+  }
+  .strikethrough {
+    position: relative;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+  }
+  .regular-price{
+      margin-right:.5rem;
+  }
+  .platform{
+      /* margin-top:100px; */
+  }
+  .featured-image
+  {
+    height: auto;
+    width: auto;
+    margin:0;
+  }
+  .box{
+      padding:1rem;
+  }
+  .product-title{
+      background-color:rgba(0, 0, 0, 0);
+      box-sizing:border-box;
+      color:rgb(70, 75, 81);
+      cursor:pointer;
+      display:inline-block;
+      font-family:Lato, sans-serif;
+      /* font-size:12.384px; */
+      font-weight:400;
+      /* height:48px; */
+      /* line-height:16.0992px; */
+      margin-bottom:12px;
+      /*margin-top:1.2384px; */
+      text-decoration-color:rgb(70, 75, 81);
+      text-decoration-line:none;
+      text-decoration-style:solid;
+      text-size-adjust:100%;
+      touch-action:manipulation;
+      /* width:197.953px; */
+      -webkit-font-smoothing:antialiased;
+  }
+  .product-title:hover{
+      color:rgb(255, 102, 0);
+  }
+  .swiper-button-next, .swiper-button-prev {
+      color: gray; /* your background color */
+      /* background-blend-mode: color-dodge; try any value possible until it suits you */
+  }
+  .swiper-wrapper {
+      box-sizing: border-box;
+      /* overflow: visible; */
+  }
+  .swiper-container{
+    padding-top: .1rem;;
+    padding-bottom: .1rem;;
+    padding-right: .5rem;;
+    padding-left: .1rem;
+    margin-bottom:20px;
+  }
+  h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
+  .featured-image
+  {
+    height: auto;
+    width: auto;
+  }
+  .section-title{
+    border-bottom-color:rgba(0, 0, 0, 0.1);
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+    border-image-outset:0px;
+    border-image-repeat:stretch;
+    border-image-slice:100%;
+    border-image-source:none;
+    border-image-width:1;
+    border-left-color:rgba(0, 0, 0, 0.1);
+    border-left-style:solid;
+    border-left-width:2px;
+    border-right-color:rgba(0, 0, 0, 0.1);
+    border-right-style:solid;
+    border-right-width:2px;
+    border-top-color:rgba(0, 0, 0, 0.1);
+    border-top-style:solid;
+    border-top-width:2px;
+    /* box-sizing:border-box;*/
+    color:rgb(255, 112, 38);
+    /* display:block;*/
+    font-family:Lato, sans-serif;
+    font-size:17.2px;
+    font-weight:700;
+    height:41.3125px;
+    line-height:27.52px;
+    padding-bottom:5.16px;
+    padding-left:13.76px;
+    padding-right:13.76px;
+    padding-top:5.16px;
+    text-align:center;
+    text-rendering:optimizeSpeed;
+    text-size-adjust:100%;
+    text-transform:none;
+      /* width:120px;  */
+    -webkit-box-decoration-break:clone;
+    -webkit-font-smoothing:antialiased;
+    margin:auto;
+    /* line-height:50px; */
+    vertical-align:middle;
+  }
+
+  h1 {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  h1:before,
+  h1:after {
+    background: rgba(0, 0, 0, 0.1);
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+      top: 50%;
+    width: 400%;
+  }
+
+  h1:before {
+    right: 100%;
+  }
+
+  h1:after {
+    left: 100%;
+  }
+
+  .section-line {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  </style>
+</head>
+<body>
+<div>
+  <div>
+    <section class="section">
+      <div class="container section-container">
+        <div class="section-line">
+          <h1 class="title section-title">Featured</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="column">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <a href="">
+                <div class="box">
+                  <figure class="image is-3by2">
+                    <img class="featured-image is-spaced" src="/static/images/{{ product.main_image }}" alt="">
+                  </figure>
+                  <p class="title product-title is-6 product-title is-spaced is-left">{{ product.title }}</p>
+                  <p class="subtitle is-6 platform has-text-grey-light">{{ product.selling_platform}}</p>
+                  <div class="prices has-text-centered">
+                    <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">{{  product.regular_price}}</span>
+                    <span class="sale-price is-size-4 has-text-weight-semibold">{{  product.offer_price}}</span>
+                  </div>
+                  <div class="has-text-centered">
+                    <a class="button is-rounded is-fullwidth is-danger is-outlined">View Deal</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+            <div class="swiper-button-prev" slot="button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+                <path fill="#b2b2b2" d="m0,22l22,-22l2.1,2.1l-19.9,19.9l19.9,19.9l-2.1,2.1l-22,-22l0,0l0,0z"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next" slot="button-next">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+                <path fill="#b2b2b2" d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container section-container">
+        <div class="section-line">
+          <h1 class="title section-title">Deals Of The Day</h1>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="columns" v-for="dailydeals in chunkedDailyDeals"> -->
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column">
+          <div class="columns is-multiline">
+            <div class="is-12-mobile is-4-tablet is-3-desktop is-one-fifth-widescreen column is-narrow" v-for="product in dailydeals" :key="product.id">
+              <a href="">
+                <div class="box">
+                  <figure class="image is-3by2">
+                    <img class="featured-image is-spaced" src="/static/images/{{ product.main_image }}" alt="">
+                  </figure>
+                  <p class="title product-title is-6 product-title is-spaced is-left">{{ product.title }}</p>
+                  <p class="subtitle is-6 platform has-text-grey-light">{{ product.selling_platform}}</p>
+                  <div class="prices has-text-centered">
+                    <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">{{  product.regular_price }}</span>
+                    <span class="sale-price is-size-4 has-text-weight-semibold">{{  product.offer_price }}</span>
+                  </div>
+                  <div class="has-text-centered">
+                    <a class="button is-rounded is-fullwidth is-danger is-outlined">View Deal</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-4-tablet is-3-desktop is-one-fifth-widescreen column is-narrow">
+          <img src="http://via.placeholder.com/350x350">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js" integrity="sha256-8s5+sIm7pngjGzUh+gtf0Hu2frBDJW7EUwYkbfmsxko=" crossorigin="anonymous"></script>
+<script>
+//import ProductIcon from './ProductIcon.vue'
+//import axios from 'axios'
+var mySwiper = new Swiper ('.swiper-container', {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  slidesPerGroup: 5,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  // mousewheel: true,
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+  autoplay: {
+    delay: 7000
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    1408: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      slidesPerGroup: 5
+    },
+    1216: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      slidesPerGroup: 4
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      slidesPerGroup: 1
+    }
+  }
+});
+</script>
+</body>
+</html>
