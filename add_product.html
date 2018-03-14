@@ -1,0 +1,551 @@
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	<!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/dist/bulma-extensions.min.css">
+    <style>
+    .log{
+      width: 200px;
+      height: 48px;
+      background-color: #FF7026;
+      margin-top: 1rem;
+    }
+    hr{
+      margin-top:.0rem;
+    }
+    .submit{
+      width: 300px;
+      height: 60px;
+      margin-top: 5px;
+      font-size: 22px;
+    }
+    .cancel{
+      width: 200px;
+      height: 60px;
+      margin-top: 5px;
+      font-size: 20px;
+      color:white;
+      background-color: #cc0000;
+    }
+    .spacing{
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    </style>
+	</head>
+<body>
+<form action="" method="post">
+  {% csrf_token %}
+  <!--logo and logout button -->
+  <!--TITLE: CREATE NEW LISTING-->
+  <div class="column is-10 is-offset-1">
+    <div class="has-text-weight-semibold has-text-left">
+      <strong class="is-size-5">
+        Create New Listing
+      </strong> 
+      <span class="has-text-grey is-size-7 has-text-weight-normal">All fields are mandatory and must be fully completed</span>
+      <hr/>
+    </div>
+  </div>
+  <!--FORM: CREATE NEW LISTING-->
+  <div class="columns">
+    <!--Dropdowns Currency-->
+    <div class="column is-half">
+      <div class="has-text-grey has-text-weight-semibold has-text-centered is-size-7">
+        <p> 
+          Select Location and Currency
+        </p>
+      </div>
+        <div class="control has-text-centered">
+        <div class="select">
+            <select>
+            <option>United States (USD $)</option>
+            <option>United Kingdom (GBP £)</option>
+            <option>Europe (EUR €) </option>
+            <option>Canada (CAD $)</option>
+            <option>Worldwide (USD $)</option>
+            </select>
+        </div>
+        </div>
+    </div>
+    <!--Dropdowns platform-->		
+    <div class="column is-half">
+      <div class="has-text-grey has-text-weight-semibold has-text-centered is-size-7">
+        <p> 
+          Select Selling Platform
+        </p>
+      </div>
+      <div class="control has-text-centered">
+        <div class="select">
+            <select>
+            <option>Amazon FBA</option>
+            <option>Amazon FBM</option>
+            <option>Merchant Fulfillment</option>
+            </select>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="column is-8 is-offset-2 is-full">
+    <!--product title-->
+    <div class="field">
+      <label class="label">
+        Product Title
+      </label>
+      <div class="control">
+        <textarea class="textarea" placeholder="e.g. Enter title here (Maximum 200 characters is allowed)"></textarea>
+        <label for="textareaChars">
+          Characters Limit:
+        </label>
+        <span id="chars">
+          200
+        </span> 
+      </div>
+    </div>
+    <!--offer quantity-->
+    <div class="field">
+      <label class="label">
+        Quantity on Offer
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. 40 (Number Only) How many coupon issued">
+      </div>
+    </div>
+    <!-- regular price+ offer price + discount PARENT-->
+    <div class="columns">
+      <!--regular price child#1-->
+      <div class="column">
+        <div class="field">
+          <label class="label">
+            Current/Normal Price
+          </label>
+          <div class="control">
+            <input class="input" type="text" placeholder="e.g. 29.95 [Only Number]">
+          </div>
+        </div>
+      </div>
+      <!--offer price child#2-->
+      <div class="column">
+        <div class="field">
+          <label class="label">
+            Offer Price
+          </label>
+          <div class="control">
+            <input class="input" type="text" placeholder="e.g. 9.95 [Only Number]">
+          </div>
+        </div>
+      </div>
+      <!--discount percentage child#3-->
+      <div class="column">
+        <div class="field">
+          <label class="label">
+            Discount Percentage (Auto)
+          </label>
+          <div class="control">
+            <input class="input" type="text" placeholder="AUTO [No Action Required]" disabled> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product link-->
+    <div class="field">
+      <label class="label">
+        Product Link (Link for customer to purchase)
+      </label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fa fa-link"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+    <!--video link-->
+    <div class="field">
+      <label class="label">
+        Video Link
+      </label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fa fa-youtube"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+    <!--coupon codes-->
+    <div class="field">
+      <label class="label">
+        Coupon Codes
+      </label>
+      <div class="control">
+        <textarea class="textarea" placeholder="All coupons codes are to be displayed in a SEPARATED line (Only ONE coupon coder per line)"></textarea>
+      </div>
+    </div>
+  </div>
+  <!--TITLE: PRODUCT DETAILS-->
+  <div class="column is-10 is-offset-1">
+    <div class="has-text-grey-dark has-text-weight-semibold has-text-left">
+      <strong class="is-size-5">
+        Product Details
+      </strong> 
+      <span class="has-text-grey is-size-7 has-text-weight-normal">All fields are mandatory and must be fully completed</span>
+      <hr/>
+    </div>
+  </div>
+  <!--FORM: PRODUCT DETAILS-->  
+  <div class="column column is-8 is-offset-2 is-full">
+    <!--warning instruction-->
+    <div class="field">
+      <label class="label">
+        Warning or Special Instruction
+      </label>
+      <div class="control">
+        <input class="input is-warning" type="text" placeholder="e.g. Sharp! Handle with Care">
+      </div>
+    </div>
+    <!--unit/variation-->		
+    <div class="field">
+      <label class="label">
+        Unit of Measure, Variation, Color or Size
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. Each,  Box of 6, Pack Of 12, Color - Blue, Size 18">
+      </div>
+    </div>
+    <!--full product description-->
+    <div class="field">
+      <label class="label">
+        Full Product Description
+      </label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Bullets and HTML is allowed"></textarea>
+      </div>
+    </div>
+    <!--special instruction-->
+    <div class="field">
+      <label class="label">
+        Special Instruction or Information
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Special Instruction if any">
+      </div>
+    </div>
+  </div>
+  <!--TITLE: SHIPPING INFORMATION-->
+  <div class="column column is-10 is-offset-1">
+    <div class="has-text-grey-dark has-text-weight-semibold has-text-left">
+      <strong class="is-size-5">
+        Shipping Information
+      </strong> 
+        <span class="has-text-grey is-size-7 has-text-weight-normal">All fields are mandatory and must be fully completed</span>
+        <hr/>
+    </div>
+  </div>
+  <!--FORM: SHIPPING INFORMATION-->
+  <div class="column column is-8 is-offset-2 is-full">
+    <!--shipping charges-->
+    <div class="field">
+      <label class="label">
+        Shipping Charges
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. Type=FREE with Amazon price, $6.95 etc">
+      </div>
+    </div>
+    <!--additional info link-->			
+    <div class="field">
+      <label class="label">
+        Additional Information Link
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. Amazon Check Rate : https://www.amazon.com/gp/help/customer/display.html?nodeId=468520 ">
+      </div>
+    </div>
+    <!--shipping time-->			
+    <div class="field">
+      <label class="label">
+        Shipping Time
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. 24-48 hours with Amazon Price, 14 days etc">
+      </div>
+    </div>
+    <!--any other info-->
+    <div class="field">
+      <label class="label">
+        Any Other Information or Instruction
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Any useful information related to your product">
+      </div>
+    </div>
+  </div>
+  <!--TITLE: SELLER INFORMATION-->
+  <div class="column column is-10 is-offset-1">
+    <div class="has-text-grey-dark has-text-weight-semibold has-text-left">
+      <strong class="is-size-5">
+        Seller Information
+      </strong> 
+        <span class="has-text-grey is-size-7 has-text-weight-normal">All fields are mandatory and must be fully completed</span>
+        <hr/>
+    </div>
+  </div>
+  <!--FORM: SELLER INFORMATION-->
+  <div class="column column is-8 is-offset-2 is-full">
+    <!--issue with coupon-->	
+    <div class="field">
+      <label class="label">
+        Issue with Coupon Code (Contact)
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Email or Contact number if customer having issue with coupon">
+      </div>
+    </div>
+    <!--brand or seller name-->		
+    <div class="field">
+      <label class="label">
+        Brand or Seller Name
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Enter brand or seller name">
+      </div>
+    </div>
+    <!--seller or customer service contact-->
+    <div class="field">
+      <label class="label">
+        Seller or Customer Service Contact
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Any contact for Customer (Tel, email etc)">
+      </div>
+    </div>
+    <!--seller email address-->
+    <div class="field">
+      <label class="label">
+        Seller Email Address
+      </label>
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Your customer services email address">
+        <span class="icon is-small is-left">
+          <i class="fa fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fa fa-check"></i>
+        </span>
+      </p>
+    </div>
+    <!--item return address-->		
+    <div class="field">
+      <label class="label">
+        Item Return Address
+      </label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Enter address or contact details"></textarea>
+      </div>
+    </div>
+    <!--seller website-->			
+    <div class="field">
+      <label class="label">
+        Seller Website
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Your website or brand page URL">
+      </div>
+    </div>
+    <!--bulk order discount-->		
+    <div class="field">
+      <label class="label">
+        Bulk or Business Order Discount!
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="If applicable, provide details">
+      </div>
+    </div>
+    <!--seller request-->		
+    <div class="field">
+      <label class="label">
+        Seller Request
+      </label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. If you like our product and services, A simple unbiased product review/feedback will help us.">
+      </div>
+    </div>
+  </div>
+  <!--TITLE: UPLOAD IMAGES-->
+  <div class="column column is-10 is-offset-1">
+    <div class="has-text-grey-dark has-text-weight-semibold has-text-left">
+      <strong class="is-size-5">
+        Upload Images
+      </strong> 
+        <span class="has-text-grey is-size-7 has-text-weight-normal">Rules: [1] Up to 5 images [2] Main Image: White background Size: 1000px x 1000px</span>
+        <hr/>
+    </div>
+    <div class="columns is-gapless is-multiline is-mobile">
+      <div class="column is-half">
+        <span class="icon has-text-danger">
+          <i class="fa fa-ban"></i>
+        </span>
+        <strong class="is-size-7">
+          IMPORTANT
+        </strong>  
+        <span class="has-text-grey is-size-7 has-text-weight-normal">
+          All images must be optimize for better performance before uploading
+        </span>
+      </div>
+      <div class="column is-one-quarter has-text-right">
+        <a class="button is-small is-info is-outlined">
+          Simple online image Optimizer
+        </a>
+      </div>
+      <div class="column is-one-quarter has-text-right">
+        <a class="button is-small is-info is-outlined">
+          Video! How to use image Optimizer
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--FORM: UPLOAD IMAGES-->
+  <div class="column column is-10 is-offset-1 is-full">
+    <!--main image images-->
+    <div class="field spacing">
+      <div class="file is-centered is-boxed is-dark name">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fa fa-upload"></i>
+            </span>
+            <span class="file-label">
+              MAIN - White Only
+            </span>
+          </span>
+          <span class="file-name has-text-centered">
+            1000px by 1000px 
+          </span>
+        </label>
+      </div>
+    </div>
+    <!--4 image images under column-image 1-->
+    <div class="columns spacing">
+      <!--image 1-->
+      <div class="column">
+        <div class="file has-name is-boxed">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Upload Image - 1
+              </span>
+            </span>
+            <span class="file-name has-text-centered">
+              Image Preview
+            </span>
+          </label>
+        </div> 
+      </div>  
+      <!--image 2-->
+      <div class="column">
+        <div class="file has-name is-boxed">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+                <span class="file-icon">
+                <i class="fa fa-upload"></i>
+                </span>
+                <span class="file-label">
+                Upload Image - 2
+                </span>
+            </span>
+            <span class="file-name has-text-centered">
+              Image Preview
+            </span>
+          </label>
+        </div> 
+      </div>  
+      <!--image 3-->
+      <div class="column">
+        <div class="file has-name is-boxed">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fa fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Upload Image - 3
+              </span>
+            </span>
+            <span class="file-name has-text-centered">
+              Image Preview
+            </span>
+          </label>
+        </div> 
+      </div>  
+      <!--image 4-->
+      <div class="column">
+        <div class="file has-name is-boxed">
+          <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fa fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Upload Image - 4
+            </span>
+          </span>
+          <span class="file-name has-text-centered">
+            Image Preview
+          </span>
+          </label>
+        </div> 
+      </div>  
+    </div>
+  </div>
+  <!--TERMS AND CONDITIONS-->
+  <div class="columns">
+    <div class="column has-text-right">
+      <label class="checkbox">
+        <input type="checkbox">
+        I agree to the <a href="#">terms and conditions</a>
+      </label>
+    </div>
+  </div>	
+  <!--SUBMIT & CANCEL-->
+  <div class="field is-grouped is-grouped-right">
+    <p class="control">
+      <button type="submit"  class="button is-success submit">
+        Submit
+      </button>
+    </p>
+    <p class="control">
+      <a class="button  cancel">
+        Cancel
+      </a>
+    </p>
+  </div>
+  <div>
+    <div>
+      <p class="is-size-7 has-text-right has-text-grey has-text-weight-semibold">
+        It may take up to 8 hours for the product to be active on the website
+      </p>
+    </div>
+  </div> 		
+</form>
+</body>
+</html>
