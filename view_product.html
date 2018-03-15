@@ -1,0 +1,424 @@
+<html>
+<head>
+<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	<!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <style>
+  .container{
+    margin-top:3rem;
+  }
+  .column{
+    margin-left:.25rem;
+    margin-right:.25rem;
+  }
+  .claim{
+    color: #464B51;
+    height: 100px;
+  }
+  .yestext{
+    margin-top:3rem;
+  }
+  .fixing{
+    margin-bottom: 0rem ! important;
+    padding-bottom: 0rem ! important;
+  }
+  .yesdeal{
+    color: #464B51;
+    width: 340px;
+    height: 40px;
+    background-color: #FF7026 ! important;
+    color: white;
+  }
+  .share{
+    color: grey;
+    font-size: 18px;
+    text-align: right;
+    margin-right:.60rem;
+  }
+  .social-icon{
+    color: grey;
+  }
+  .save{
+    margin-top:0.3rem;
+    margin-bottom:1rem;
+    padding-top:.1rem;
+    color: #FF7026;
+  }
+  .acccolor{
+    background-color: white;
+    margin-left:.25rem;
+  }
+  hr{
+    margin-top:.0rem;
+    margin-bottom:.25rem;
+  }
+  .prices{
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+  }
+  .strikethrough {
+    position: relative;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+  }
+  .regular-price{
+    margin-right:.5rem;
+  }
+  #clockdiv{
+    font-family: Segoe UI;
+    color: #464B51;
+    display: inline-block;
+    font-weight: semibold;
+    text-align: center;
+    font-size: 25px;
+  }
+  #clockdiv > div{
+    padding:10px;
+    border-radius: 3px;
+    background: #F3F2F2;
+    display: inline-block;
+  }
+  #clockdiv div > span{
+    padding: 6px;
+    border-radius: 3px;
+    background: #DFDFDF;
+    display: inline-block;
+  }
+  .smalltext{
+    padding-top: 1px;
+    font-size: 12px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="columns">
+      <!--image-->
+      <div class="column is-5">
+        <div class="columns">
+          <div class="column">
+            <img src="main_image.jpg" alt="Available from USA">
+          </div>
+        </div>
+        <!--product thumbnails-->
+        <div class="columns is-mobile">
+          <div class="column">
+            <img src="https://i.imgur.com/mR511Jp.png" alt="Product thumbnails">
+          </div>
+          <div class="column">
+            <img src="https://i.imgur.com/mR511Jp.png" alt="Product thumbnails">
+          </div>
+          <div class="column">
+            <img src="https://i.imgur.com/mR511Jp.png" alt="Product thumbnails">
+          </div>
+          <div class="column">
+            <img src="https://i.imgur.com/mR511Jp.png" alt="Product thumbnails">
+          </div>
+          <div class="column">
+            <img src="https://i.imgur.com/mR511Jp.png" alt="Product thumbnails">
+          </div>
+        </div>
+      </div>
+      <!--description-->
+      <div class="column is-7">
+        <!--title-->
+        <div class="columns">
+          <div class="column is-full">
+            <h5 class="title is-5">
+              Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel
+              <span class="has-text-grey-light has-text-weight-semibold is-size-7">
+                by Mozzbi
+              </span>
+            </h5>
+          </div>
+        </div>
+        <!--platform-->
+        <div class="columns">
+          <div class="column is-full is-size-7">
+            <img src="us.png" />
+            Amazon
+          </div>
+        </div>
+        <!--quantity-->
+        <div class="columns">
+          <div class="column is-half has-text-dark has-text-weight-semibold is-size-6">
+            <div class="columns is-mobile">
+              <div class="column is-half">
+                Quantity Available
+              </div>
+              <div class="column is-half">
+                <a class="button is-light">
+                  30
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--claim button-->
+        <div class="columns">
+          <div class="column is-full has-text-centered">
+            <a class="button is-large has-text-weight-semibold is-light claim"> Claim Your Coupon Code</a>
+          </div>
+        </div>
+        <!--prices-->
+        <div class="columns fixing">
+          <div class="column fixing is-full has-text-centered prices">
+            <div class="prices has-text-centered">
+              <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">
+                $12.99
+              </span>
+              <span class="sale-price is-size-4 has-text-weight-semibold">
+                $8.99
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--save-->
+        <div class="columns">
+          <div class="column is-full has-text-centered has-text-weight-semibold is-size-7 save">
+            You Save 25%
+          </div>
+        </div>
+        <!--countdown expires-->
+        <div class="columns">
+          <div class="column is-full has-text-centered">
+            <div class="smalltext has-text-centered has-text-grey-dark has-text-weight-semibold">
+              Offer expires in
+            </div>
+            <div>
+              <div id="clockdiv">
+                <div>
+                  <span class="days">3</span>
+                  <div class="smalltext">Days</div>
+                </div>
+                <div>
+                  <span class="hours">2</span>
+                  <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                  <span class="minutes">54</span>
+                  <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                  <span class="seconds">3</span>
+                  <div class="smalltext">Seconds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Seller platform button-->
+        <div class="columns fixing">
+          <div class="column fixing is-full has-text-grey has-text-weight-semibold has-text-centered is-size-7 yestext">
+            Click the button to buy it from Amazon/Sellers Platform
+          </div>
+        </div>
+        <!--ves deal-->
+        <div class="columns">
+          <div class="column is-full has-text-centered has-text-weight-semibold">
+            <a :href="product_details.product_link" class="button is-link yesdeal">YES! I WANT THE DEAL</a>
+          </div>
+        </div>
+        <!--video-->
+        <div class="columns">
+          <div class="column is-full has-text-grey has-text-weight-semibold has-text-left is-size-7">
+            <p>View Video</p>
+            <icon name="youtube-play" class="video" style="font-size:36px;color:grey"/>
+          </div>
+        </div>
+        <!--share-->
+        <div class="footer-social-icons share">
+          <ul class="social-icons share">
+            <a href="" class="social-icon"> <icon name="facebook"/></a>
+            <a href="" class="social-icon"> <icon name="twitter"/></a>
+            <a href="" class="social-icon"> <icon name="rss"/></a>
+            <a href="" class="social-icon"> <icon name="whatsapp"/></a>
+            <a href="" class="social-icon"> <icon name="linkedin"/></a>
+            <a href="" class="social-icon"> <icon name="google-plus"/></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--bottom section-->
+    <div class="columns acccolor">
+      <div class="column">
+        <div class="tabs is-centered is-large">
+          <ul>
+            <li class="is-active">
+              <a>
+                <span class="icon is-small">
+                  <icon name="info-circle"/>
+                </span>
+                <span>Product Details</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="icon is-small">
+                  <icon name="truck"/>
+                </span>
+                <span>Shipping Information</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="icon is-small">
+                  <icon name="shopping-cart"/>
+                </span>
+                <span>Sellers Details</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-10 is-offset-1">
+        <div class="is-size-6 acccolor">
+          <div>
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Product description:
+              <hr/>
+            </div>
+            Cutting Edge Design That Protects
+              The Mozzbi pizza cutter that slices through any pizza, first time and every time.
+
+              Show off your finest and latest high-tech performance blade with a stylish design for any kitchen, but it’s about more than just looks. Our custom thermoplastic elastomer handle is fixed with a protective shield to guard those precious fingers too!
+
+              Easily disassembled for cleaning
+              Dishwasher safe
+              Non slip ergonomic handle and grip
+              Fits comfortably in the palm of your hand
+              Stainless steel blade
+              Easily fits in kitchen drawer
+              Let the Mozzbi Pizza Cutter do all the talking!
+
+              Cleaning Instructions
+
+              Simply takes seconds to remove the blade.
+
+              Lift from the middle where it says ‘Open’
+              Pull the blade from the case
+              Use Hand wash or Dishwasher
+              Carefully place the blade into the case
+              Push on the middle to lock the blade
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Size:
+              <hr/>
+            </div>
+            {{product_details.size}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Warning:
+              <hr/>
+            </div>
+            Sharp! Handle with Care
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Unit of Measure/Variation/Color:
+              <hr/>
+            </div>
+            {{product_details.variation}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Instruction:
+              <hr/>
+            </div>
+            {{product_details.instruction}}
+          </div>
+        </div>
+      </div>
+      <div class="column is-10 is-offset-1">
+        <div class="is-size-6 acccolor">
+          <div>
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Shipping Charge:
+              <hr/>
+            </div>
+            {{product_details.shipping_cost}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Additional shipping information<hr/>
+            </div>
+            <a class="btn btn-primary" :href="product_details.shipping" role="button">
+              Click here
+            </a>
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Shipping Time:
+              <hr/>
+            </div>
+            {{product_details.shipping_time}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Any other information/Instruction:
+              <hr/>
+            </div>
+            {{product_details.shipping_other}}
+          </div>
+        </div>
+      </div>
+      <div class="column is-10 is-offset-1">
+        <div class="is-size-6 acccolor">
+          <div class="">
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Issue with Coupon Code:
+              <hr/>
+            </div>
+            Telephone Number or email address
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Brand/Seller Name:
+              <hr/>
+            </div>
+            {{product_details.seller_name}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Seller or Customer service Contact:
+              <hr/>
+            </div>
+            {{product_details.seller_contact}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Seller email Address:
+              <hr/>
+            </div>
+            {{product_details.seller_email}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Return Address:
+              <hr/>
+            </div>
+            {{product_details.seller_address}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Website:
+              <hr/>
+            </div>
+            {{product_details.seller_website}}
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Bulk or business order Discount:
+              <hr/>
+            </div>
+            Telephone or email us
+            <div class="has-text-grey-dark has-text-weight-bold">
+              Seller Request:
+              <hr/>
+            </div>
+            {{product_details.seller_request}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
