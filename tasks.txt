@@ -1,9 +1,18 @@
-Home Page			Design: ✔  HTML: ✖
-Product Page		Design: ✖  HTML: ✖
-Category Page 		Design: ✖  HTML: ✖
-Add Product Page 	Design: ✖  HTML: ✖
-Notification page 	Design: ✖  HTML: ✖
-Profile page 		Design: ✖  HTML: ✖
-Change psswrd page 	Design: ✖  HTML: ✖
-My subscripton page Design: ✖  HTML: ✖
-Admin page 			Design: ✖  HTML: ✖
+Home Page
+	Design: ✔  HTML: ✖
+Product Page
+	Design: ✖  HTML: ✖
+Category Page 
+	Design: ✖  HTML: ✖
+Add Product Page
+	Design: ✖  HTML: ✖
+Notification page
+	Design: ✖  HTML: ✖
+Profile page
+	Design: ✖  HTML: ✖
+Change password page
+	Design: ✖  HTML: ✖
+My subscription page
+	Design: ✖  HTML: ✖
+Admin page
+	Design: ✖  HTML: ✖
