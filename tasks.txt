@@ -1,9 +1,9 @@
 Home Page
 	Design: ✔  HTML: ✖
 Product Page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✖
 Category Page 
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✖
 Add Product Page
 	Design: ✖  HTML: ✖
 Notification page
