@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	 <!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/dist/bulma-extensions.min.css">
+		<style>
+			.margin{
+			margin-top:.25rem;
+			margin-left:1.5rem;
+			margin-right:1.5rem;
+			}
+			.save{
+				margin-top:-1.5rem;
+				height: 24px;
+				width: 170px;
+				border-color: hsl(171, 100%, 41%);
+			}
+			.fulfilled{
+				margin-top:-2rem;
+				margin-bottom:6rem;
+			}	
+			.claiml{
+				height: 50px;
+				margin-top:7rem;
+			}
+			.claimc{
+				height: 48px;
+				width: 270px;
+				margin-top:7rem;
+				border:2px;
+				border-style: dashed;
+			}
+			.claimr{
+				height: 50px;
+				margin-top:7rem;
+			}
+			.yesdeal{
+				width: 440px;
+				height: 50px;
+				margin-top:1rem;
+			}			
+			.line{
+			margin-top:-1rem;
+			margin-bottom:1rem;
+			}
+			.prices{
+				display: flex;
+				justify-content: center; /* align horizontal */
+				align-items: center; /* align vertical */
+			}
+			.strikethrough {
+			  position: relative;
+			}
+			.strikethrough:before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 50%;
+				right: 0;
+				border-top: 1px solid;
+				border-color: inherit;
+
+				-webkit-transform:rotate(-5deg);
+				-moz-transform:rotate(-5deg);
+				-ms-transform:rotate(-5deg);
+				-o-transform:rotate(-5deg);
+				transform:rotate(-5deg);
+			}
+			.regular-price{
+				margin-right:.5rem;
+			}
+			table td {
+				border-left: 0px solid #000;
+				border-right: 0px solid #000;
+				border-top: 0px solid #000;
+				border-bottom: 0px solid #000;
+			}
+			table td:first-child {
+				width: 15rem;
+				border-left: none;
+				border-top: none;
+				border-bottom: none;
+			}
+			table td:last-child {
+				border-right: none;
+				border-top: none;
+				border-bottom: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--main layout has 2 children image and description-->
+		<div class="columns margin">
+			<!--image-->
+			<div class="column is-half">
+				<div class="columns">
+					<div class="column">
+						<figure class="image is-480x480">
+							<img src="https://bulma.io/images/placeholders/480x480.png">
+						</figure>
+					</div>
+				</div>
+		<!--product thumbnails-->
+				<div class="columns is-mobile">
+					<div class="column">
+						<figure class="image is-96x96">
+							<img src="https://bulma.io/images/placeholders/96x96.png">
+						</figure>
+					</div>
+					<div class="column">
+						<figure class="image is-96x96">
+							<img src="https://bulma.io/images/placeholders/96x96.png">
+						</figure>
+					</div>
+					<div class="column">
+						<figure class="image is-96x96">
+							<img src="https://bulma.io/images/placeholders/96x96.png">
+						</figure>
+					</div>
+					<div class="column">
+						<figure class="image is-96x96">
+							<img src="https://bulma.io/images/placeholders/96x96.png">
+						</figure>
+					</div>
+					<div class="column">
+						<figure class="image is-96x96">
+							<img src="https://bulma.io/images/placeholders/96x96.png">
+						</figure>
+					</div>
+				</div>	
+			</div>
+		<!--description-->
+			<div class="column is-half">			
+		<!--New Column/3-->
+				<div class="columns">
+		<!--Brand or Seller-->	  
+					<div class="column is-size-7 has-text-centered has-text-grey">
+						Brand or Seller 
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">[Mozzbi]</span>
+						</br>
+					</div>
+		<!--Code Claimed!-->	  
+					<div class="column is-size-7 has-text-centered has-text-grey">
+						Code Claimed!
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">[100/150]</span>
+						</br>
+					</div>
+		<!--ramaining Days Left-->	  	
+					<div class="column is-size-7 has-text-centered has-text-grey">
+						Remaining
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">[10 Days]</span>
+						</br>
+					</div>
+				</div>
+				<hr/ Class="line">
+		<!--title-->
+				<div class="columns">
+					<div class="column is-full">
+						<h5 class="title is-5">
+							NEW Mozzbi Recover Strap with D-Shackle, Polyester 4inch Wide, 6M Long with D ring Shackles<hr/>
+						</h5>
+					</div>
+				</div>
+		<!--selling platform-->
+				<div class="columns">
+					<div class="column is-full is-size-7 has-text-grey fulfilled">
+						<img src="https://www.vipon.com/images/flags/om.png" alt="Available from USA"> Fulfilled by Amazon
+					</div>
+				</div>
+		<!--prices-->
+				<div class="columns fixing">
+					<div class="column fixing is-full has-text-centered prices">
+						<div class="prices has-text-centered">
+							<span class="regular-price strikethrough is-size-5 has-text-grey-light is-spaced">$49.95</span>
+							<span class="sale-price is-size-3 has-text-weight-semibold has-text-primary">$24.95</span>
+						</div>
+					</div>
+				</div>
+		<!--save-->
+				<div class="columns">
+					<div class="column is-full has-text-centered">
+					<a class="button is-small has-text-weight-semibold is-size-7 has-text-grey-dark save">
+					You Save 25%
+					</a>
+					</div>
+				</div>				
+		<!--claim button-->
+				<div class="columns">
+					<div class="column is-full has-text-centered">
+						<a class="button has-text-weight-semibold is-light is-size-7 claiml"> Show code</a>
+						<a class="button has-text-weight-semibold is-dashed is-size-5 claimc"> Coupon Code</a>
+						<a class="button has-text-weight-semibold is-light is-size-7 claimr"> Copy code</a>
+					</div>
+				</div>				
+		<!--ves deal-->
+				<div class="columns">
+					<div class="column is-full has-text-centered has-text-weight-semibold">
+						<a class="button is-dark is-size-5 is-primary yesdeal">
+							Go to Order Page
+						</a>
+					</div>
+				</div>			
+		<!--share icons-->
+				<div class="columns">
+					<div class="column is-full has-text-grey has-text-weight-semibold has-text-right is-size-7 icon is-small">
+						<span class="icon is-medium">
+							<i class="fa fa-facebook-square fas fa-2x"></i>
+						</span>
+						<span class="icon is-medium">
+							<i class="fa fa-twitter-square fas fa-2x"></i>
+						</span>
+						<span class="icon is-medium">
+							<i class="fa fa-envelope-square fas fa-2x"></i>
+						</span>
+						<span class="icon is-medium">
+							<i class="fa fa-google-plus-square fas fa-2x"></i>
+						</span>
+						<span class="icon is-medium">
+							<i class="fa fa-linkedin-square fas fa-2x"></i>
+						</span>
+							<span class="icon is-medium">
+						<i class="fa fa-pinterest-square fas fa-2x"></i>
+						</span>
+							<span class="icon is-medium">
+						<i class="fa fa-whatsapp fas fa-2x"></i>
+						</span>
+					</div>
+				</div>			
+			</div>
+		</div>
+		
+		<!--bottom tabs-->	
+		<div class="tabs is-left margin">
+			<ul>
+		<!--Description-->	
+				<li class="is-active">
+					<a>
+						<span class="icon is-small has-text-primary">
+						<i class="fa fa-list"></i>
+						</span>
+						<span class="has-text-grey is-size-6 has-text-weight-semibold">
+						Product Description
+						</span>
+					</a>
+				</li>
+		<!--Seller information-->		
+				<li>
+				  <a>
+						<span class="icon is-small has-text-primary">
+						<i class="fa fa-list"></i>
+						</span>
+						<span class="has-text-grey is-size-6 has-text-weight-semibold">
+						Seller Information
+						</span>
+				  </a>
+				</li>
+		<!--Shipping Information-->		
+				<li>
+				  <a>
+						<span class="icon is-small has-text-primary">
+						<i class="fa fa-list"></i>
+						</span>
+						<span class="has-text-grey is-size-6 has-text-weight-semibold">
+						Shipping Information
+						</span>
+				  </a>
+				</li>
+
+			</ul>
+		</div>	
+		<!-- Bottom tabs DESCRIPTION-->
+		<table class="table column is-10 is-offset-1 table is-bordered">
+		<!-- description attribute 1-->
+			<tbody>
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Unit / Variation / Color
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						Color Black, Pack of 6
+					</td>
+				</tr>
+		<!-- description attribute 2-->
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Warranty/Instruction
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						12 Month Mozzbi Warranty
+					</td>
+				</tr>	
+		<!-- description attribute 3-->			  
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Full Description
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						We can claim that our product is:<br/>
+						• # 1 Pizza cutter <br/>
+						• Cuts anything soft which fits under the balde<br/>
+						• Grade 430 Stainless Steel Blade<br/>
+						• TPE and ABS material handle<br/>
+						• FDA Approval and BPA Free<br/>
+						• Palm-held design comfortable to hold and control<br/>
+						• Dishwasher safe <br/>
+						• 12 Month Warranty [Condition Applies]<br/><br/>
+						Like myself, most buyers don't understand the technical jargon. All you want is a Pizza cutter that CUTS Pizza, offers Value for money and lasts a long time.
+						Mozzbi Pizza cutter does exactly that and this is the ONLY CLAIM WE STAND BY.<br/><br/>
+						We totally understand, that it can be a risky venture to buy an online product without seeing or touching it.
+						That's why we go that extra mile for our customers and offer a 30 day 100% Satisfaction or Money Back Guarantee.
+						Mozzbi is confident - Let the Pizza cutter do all the talking! 'SEEING IS BELIEVING'<br/><br/>
+						Our customers are intelligent and know a good product when they see one. We want our customers to make the statement whether it's #1 product or #1000 product!<br/><br/>
+						Give this product the headline it deserves!
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<!-- Bottom tab SELLER INFORMATION-->
+		<table class="table column is-10 is-offset-1 table is-bordered">
+		<!-- Seller information attribute 1-->
+			<tbody>
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Brand / Seller
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						Mozzbi
+					</td>
+				</tr>
+		<!-- Seller information attribute 2-->
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Contact / Email Address <br/> Under 24 Hrs response
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						Note: Only available via email contact@mozzbi.com 
+					</td>
+				</tr>	
+		<!-- Seller information attribute 3-->			  
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Other Information
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						Please visite our website www.mozzbi.com for other offers <br/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Bottom tab SHIPPING INFORMATION-->
+		<table class="table column is-10 is-offset-1 table is-bordered">
+		<!-- shipping information attribute 1-->
+			<tbody>
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							For Amazon Prime Account Holder
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						<a class="button is-small is-dark">Amazon Shipping Terms</a>
+					</td>
+				</tr>
+		<!-- shipping information attribute 2-->
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Shipping Charge<br/> (Merchant Fulfillment)
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						$6.95
+					</td>
+				</tr>	
+		<!-- shipping information attribute 3-->			  
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Shipping Time<br/> (Merchant Fulfillment)
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						7.-14 days
+					</td>
+				</tr>
+		<!-- shipping information attribute 4-->			  
+				<tr>
+					<td span class="has-text-right">
+						<a span class="is-size-7 has-text-black-bis has-text-weight-bold">
+							Return and Refunds<br/> (Merchant Fulfillment)
+						</a>
+					</td>
+					<td span class="is-size-7 has-text-grey-dark has-text-weight-semibold has-text-justified">
+						Our return address is: <br/>
+						Oban Street<br/>
+						London<br/>
+						E14 0GR<br/>
+					</td>
+				</tr>				
+				
+				
+				
+			</tbody>
+		</table>
+		
+		
+		
+		
+	</body>
+</html>
