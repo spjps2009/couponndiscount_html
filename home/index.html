@@ -56,11 +56,6 @@
     .regular-price{
         margin-right:.5rem;
     }
-    .featured-image{
-      height: auto;
-      width: auto;
-      margin:0;
-    }
     .box{
         padding:1rem;
     }
@@ -100,10 +95,6 @@
     li {
       display: inline-block;
       margin: 0 10px;
-    }
-    .featured-image{
-      height: 1rem;
-      width: auto;
     }
     .section-title{
       border-color:#BFBFBF;
@@ -171,6 +162,7 @@
 </head>
 <body>
 <div id="app">
+  
   <div>
     <section class="section">
       <div class="container section-container">
@@ -179,10 +171,10 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <div class="container is-fluid">
       <div class="column">
         <swiper :options="swiperOptions"  v-if="urls">
-          <swiper-slide class="column" v-for="item in urls">
+          <swiper-slide class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen is-one-sixth-fullhd" v-for="item in urls">
               <a href="">
                 <div class="box product-box">
                   <figure class="image is-1by1">
@@ -230,15 +222,15 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <div class="container is-fluid">
       <div class="columns">
         <div class="column is-9">
           <div class="columns is-multiline">
-            <div class="column is-narrow" v-for="item in urls">
+            <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen is-one-fifth-fullhd" v-for="item in urls">
               <a href="">
-                <div class="box product-box is-narrow">
-                  <figure class="featured-image image is-1by1">
-                    <img :src="item" alt="">
+                <div class="box product-box">
+                  <figure class="image is-1by1">
+                    <img class="featured-image" :src="item" alt="">
                   </figure>
                   <p class="title product-title is-65 is-spaced is-left has-text-normal has-text-grey">Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel</p>
                   <div class="media">
