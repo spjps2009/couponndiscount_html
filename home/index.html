@@ -102,7 +102,7 @@
       margin: 0 10px;
     }
     .featured-image{
-      height: auto;
+      height: 1rem;
       width: auto;
     }
     .section-title{
@@ -156,7 +156,6 @@
       margin-bottom: 1.5rem;
     }
     .product-box{
-      width:215px;
       border-radius:0;
     }
     .product-button{
@@ -179,51 +178,51 @@
           <h1 class="section-title has-text-primary is-size-5 has-text-weight-normal">Featured</h1>
         </div>
       </div>
-      <div class="container">
-        <div class="column">
-          <swiper :options="swiperOptions"  v-if="urls">
-            <swiper-slide class="column" v-for="item in urls">
-                <a href="">
-                  <div class="box product-box">
-                    <figure class="image is-1by1">
-                      <img class="featured-image is-spaced" :src="item" alt="">
-                    </figure>
-                    <p class="title product-title is-65 is-spaced is-left has-text-normal has-text-grey">Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel</p>
-                    <div class="media">
-                      <div class="media-left no-flag-margin">
-                        <figure class="image is-24x24">
-                          <img src="https://spjps2009.github.io/couponndiscount_html/static/images/us.png" alt="Available in United States">
-                        </figure>
-                      </div>
-                      <div class="media-content">
-                        <p class="subtitle is-7 platform has-text-grey">Amazon Fulfillment</p>
-                      </div>
+    </section>
+    <div class="container">
+      <div class="column">
+        <swiper :options="swiperOptions"  v-if="urls">
+          <swiper-slide class="column" v-for="item in urls">
+              <a href="">
+                <div class="box product-box">
+                  <figure class="image is-1by1">
+                    <img class="featured-image is-spaced" :src="item" alt="">
+                  </figure>
+                  <p class="title product-title is-65 is-spaced is-left has-text-normal has-text-grey">Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel</p>
+                  <div class="media">
+                    <div class="media-left no-flag-margin">
+                      <figure class="image is-24x24">
+                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/us.png" alt="Available in United States">
+                      </figure>
                     </div>
-                    <div class="prices has-text-centered">
-                      <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">$12.99</span>
-                      <span class="sale-price is-size-4 has-text-weight-semibold has-text-primary">$8.99</span>
-                    </div>
-                    <p class="has-text-centered subtitle is-7 has-text-semibold has-text-grey-dark">You Save 39%</p>
-                    <div class="has-text-centered">
-                      <a class="product-button button is-fullwidth is-primary">View Deal</a>
+                    <div class="media-content">
+                      <p class="subtitle is-7 platform has-text-grey">Amazon Fulfillment</p>
                     </div>
                   </div>
-                </a>
-            </swiper-slide>
-            <div class="swiper-button-prev" slot="button-prev">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
-                <path fill="#7F7F7F" d="m0,22l22,-22l2.1,2.1l-19.9,19.9l19.9,19.9l-2.1,2.1l-22,-22l0,0l0,0z"/>
-              </svg>
-            </div>
-            <div class="swiper-button-next" slot="button-next">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
-                <path fill="#7F7F7F" d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"/>
-              </svg>
-            </div>
-          </swiper>
-        </div>
+                  <div class="prices has-text-centered">
+                    <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">$12.99</span>
+                    <span class="sale-price is-size-4 has-text-weight-semibold has-text-primary">$8.99</span>
+                  </div>
+                  <p class="has-text-centered subtitle is-7 has-text-semibold has-text-grey-dark">You Save 39%</p>
+                  <div class="has-text-centered">
+                    <a class="product-button button is-fullwidth is-primary">View Deal</a>
+                  </div>
+                </div>
+              </a>
+          </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+              <path fill="#7F7F7F" d="m0,22l22,-22l2.1,2.1l-19.9,19.9l19.9,19.9l-2.1,2.1l-22,-22l0,0l0,0z"/>
+            </svg>
+          </div>
+          <div class="swiper-button-next" slot="button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+              <path fill="#7F7F7F" d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"/>
+            </svg>
+          </div>
+        </swiper>
       </div>
-    </section>
+    </div>
     <section class="section">
       <div class="container section-container">
         <div class="section-line">
@@ -237,9 +236,9 @@
           <div class="columns is-multiline">
             <div class="column is-narrow" v-for="item in urls">
               <a href="">
-                <div class="box product-box">
-                  <figure class="image is-1by1">
-                    <img class="featured-image is-spaced" :src="item" alt="">
+                <div class="box product-box is-narrow">
+                  <figure class="featured-image image is-1by1">
+                    <img :src="item" alt="">
                   </figure>
                   <p class="title product-title is-65 is-spaced is-left has-text-normal has-text-grey">Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel</p>
                   <div class="media">

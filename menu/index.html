@@ -8,70 +8,48 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <style>
-        .menu-container.container.is-fluid{
-          margin-right: 0;
-          margin-left: 0;
-        }
-        .dropdown-menu {
-          max-width: none;
-          width: 500px;
-        }
-        .navbar-burger{
-          color:white;
-        }
-        /* .banner-demo {
-          background: black;
-          color: white;
-          display: flex;
-          place-content: center center;
-          height: 3em;
-          width: 100%;
-        } */
-      
-        #top-menu{
-          height:2rem;
-          min-height: 2rem;
-        }
-        .custom-dropdown.navbar-dropdown.is-boxed{
-          background-color: rgba(51, 51, 51, 0.63);
-          border-radius: 0;
-        }
-        .custom-dropdown-item.navbar-item{
-          color:white;
-        }
-        .custom-dropdown-item-all.navbar-item{
-          color:#ff6600;
-        }
-        .navbar-link::after{
-          border-left-color: #ff6600;
-          border-bottom-color: #ff6600;
-        }
-        .navbar-share-icon{
-          color:gray;
-        }
-        .navbar-spacing{
-          padding-left:3rem;
-        }
-        .custom-navbar-item{
-          color:gray;
-        }
-        .navbar.is-dark.custom-navbar{
-          background-color:#464b51;
-          height: 5rem;
-        }
-        .button.is-danger.custom-danger{
-          background-color:#ff6600;
-        }
+      .menu-container.container.is-fluid{
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .dropdown-menu {
+        max-width: none;
+        width: 500px;
+      }
+
+      #top-menu{
+        height:2rem;
+        min-height: 2rem;
+      }
+      .custom-dropdown.navbar-dropdown.is-boxed{
+        background-color: rgba(51, 51, 51, 0.63);
+        border-radius: 0;
+      }
+      .custom-dropdown-item.navbar-item{
+        color:white;
+      }
+      .navbar-share-icon{
+        color:gray;
+      }
+      .country-image{
+        width:2rem;
+        margin-right:.6rem;
+      }
+    
       </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
     new Vue({
-      name: 'Menu',
+      el: '#header',
       data: function () {
         return {
-          showNav: false
+          showNav: false,
+          countries: {
+            "USA":"../static/images/coutries/us.png",
+            "UK":"../static/images/coutries/us.png"
+          }
         }
       },
       components: {
@@ -107,7 +85,7 @@
   </head>
 
   <body>
-    <header class="header" v-on:scroll="handleScroll()">
+    <header id="header" class="header" v-on:scroll="handleScroll()">
       <div class="container is-fluid menu-container">
         <nav class="navbar is-transparent is-mobile" id="top-menu">
             <div class="navbar-menu">
@@ -117,8 +95,13 @@
                     Choose Platform
                   </a>
                   <div class="navbar-dropdown is-boxed custom-dropdown">
-                    <a class="navbar-item custom-dropdown-item" href="/documentation/overview/start/">
-                      USA
+                    <a class="navbar-item custom-dropdown-item" v-for="country in countries">
+                      <span>
+                        <figure class="image is-16by9 country-image">
+                          <img src="../static/images/coutries/us.png">
+                        </figure>
+                      </span>
+                      {{country}}
                     </a>
                     <hr class="navbar-divider">
                     <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/modifiers/syntax/">
@@ -155,22 +138,11 @@
                       Baxter
                     </a>
                     <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item-all has-text-weight-bold" href="https://bulma.io/documentation/layout/container/">
+                    <a class="navbar-item custom-dropdown-item-all has-text-weight-bold has-text-primary" href="https://bulma.io/documentation/layout/container/">
                       View All
                     </a>
                   </div>
                 </div>
-                <div class="navbar-item navbar-spacing">
-                </div>
-                <a class="navbar-item custom-navbar-item" href="https://bulma.io/">
-                  Deal Ending Soon
-                </a>
-                <a class="navbar-item custom-navbar-item" href="https://bulma.io/">
-                  Flash Deal
-                </a>
-                <a class="navbar-item custom-navbar-item" href="https://bulma.io/">
-                  Popular Categories
-                </a>
               </div>
               <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -210,10 +182,10 @@
       </div>
       <div class="container is-fluid menu-container">
         <!-- START NAV -->
-        <nav class="navbar is-dark custom-navbar" id="sticky">
+        <nav class="navbar is-light custom-navbar" id="sticky">
             <div class="navbar-brand">
               <a class="navbar-item" href="{% url 'products:index' %}">
-                <img src="logo.png">
+                <img src="../static/images/logo.png">
               </a>
               <div class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }">
                 <span></span>
@@ -229,7 +201,7 @@
                 <div class="navbar-item">
                   <div class="dropdown is-hoverable">
                     <div class="dropdown-trigger">
-                      <button class="button is-rounded is-light is-outlined" aria-haspopup="true" aria-controls="dropdown-menu4">
+                      <button class="button is-dark" aria-haspopup="true" aria-controls="dropdown-menu4">
                         <span>Categories</span>
                         <span class="icon is-small has-text-danger">
                           <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -278,10 +250,10 @@
                 <div class="navbar-item">
                   <div class="field has-addons">
                     <div class="control is-expanded">
-                      <input class="input is-rounded is-fullwidth" type="text" placeholder="Search Deals">
+                      <input class="input is-fullwidth" type="text" placeholder="Search Deals">
                     </div>
                     <div class="control">
-                      <a class="button is-clear is-rounded">
+                      <a class="button is-clear">
                         <i class="fa fa-search"></i>
                       </a>
                     </div>
@@ -292,12 +264,12 @@
                 <div class="navbar-item">
                   <div class="field is-grouped">
                     <p class="control">
-                      <a class="button is-light is-rounded" href="{% url 'account_login' %}">
+                      <a class="button is-dark" href="{% url 'account_login' %}">
                         <span>Login</span>
                       </a>
                     </p>
                     <p class="control">
-                      <a class="button is-rounded is-danger custom-danger" href="/join">
+                      <a class="button is-primary" href="/join">
                         <span>Join as Seller</span>
                       </a>
                     </p>
