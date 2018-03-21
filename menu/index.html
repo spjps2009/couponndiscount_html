@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
 
   <body>
@@ -53,26 +54,17 @@
                     Choose Platform
                   </a>
                   <div class="navbar-dropdown is-boxed custom-dropdown">
-                    <a class="navbar-item custom-dropdown-item" v-for="country in countries">
-                      <span>
-                        <figure class="image is-16by9 country-image">
-                          <img src="../static/images/coutries/us.png">
-                        </figure>
-                      </span>
-                      {{country}}
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                      UK
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/columns/basics/">
-                      Canada
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/layout/container/">
-                      Worldwide
-                    </a>
+                    <div v-for="(country, index) in countries">
+                      <a class="navbar-item custom-dropdown-item">
+                        <span>
+                          <figure class="image is-2by1 country-image">
+                            <img :src="country.image">
+                          </figure>
+                        </span>
+                        {{country.name}}
+                      </a>
+                      <hr class="navbar-divider" v-if="index!=countries.length-1">
+                    </div>
                   </div>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -108,11 +100,21 @@
                     Download App
                   </a>
                   <div class="navbar-dropdown is-boxed custom-dropdown">
-                    <a class="navbar-item custom-dropdown-item" href="/documentation/overview/start/">
+                    <a class="navbar-item custom-dropdown-item">
+                      <span>
+                        <figure class="image is-2by1 country-image">
+                          <img src="../static/images/icons/android.png">
+                        </figure>
+                      </span>
                       Android
                     </a>
                     <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/modifiers/syntax/">
+                    <a class="navbar-item custom-dropdown-item">
+                      <span>
+                        <figure class="image is-2by1 country-image">
+                          <img src="../static/images/icons/apple.png">
+                        </figure>
+                      </span>
                       iOS
                     </a>
                   </div>
@@ -222,7 +224,7 @@
                 <div class="navbar-item">
                   <div class="field is-grouped">
                     <p class="control">
-                      <a class="button is-dark" href="{% url 'account_login' %}">
+                      <a class="button is-dark" href="/login/">
                         <span>Login</span>
                       </a>
                     </p>
@@ -244,10 +246,13 @@
       data: function () {
         return {
           showNav: false,
-          countries: {
-            "USA":"../static/images/coutries/us.png",
-            "UK":"../static/images/coutries/us.png"
-          }
+          countries: [
+            {name:"USA", image:"../static/images/icons/us.png"},
+            {name:"UK", image:"../static/images/icons/gb.png"},
+            {name:"Europe", image:"../static/images/icons/eu.png"},
+            {name:"Canada", image:"../static/images/icons/ca.png"},
+            {name:"Worldwide", image:"../static/images/icons/world.png"},
+          ]
         }
       },
       components: {
