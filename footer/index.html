@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coupon N Discount</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style>
+      .menu-container.container.is-fluid{
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .dropdown-menu {
+        max-width: none;
+        width: 500px;
+      }
+
+      #top-menu{
+        height:2rem;
+        min-height: 2rem;
+      }
+      .custom-dropdown.navbar-dropdown.is-boxed{
+        background-color: rgba(51, 51, 51, 0.63);
+        border-radius: 0;
+      }
+      .custom-dropdown-item.navbar-item{
+        color:white;
+      }
+      .navbar-share-icon{
+        color:gray;
+      }
+      .country-image{
+        width:2rem;
+        margin-right:.6rem;
+      }
+      #footer{
+        padding-bottom:1rem;
+      }
+      .join-button{
+        display: flex !important;
+        justify-content: center;
+        align-items: center; 
+      }
+      .right-line{
+        padding-right:20px; 
+        border-right: 1px solid #ccc;
+      }
+      .stick-bottom{
+        vertical-align: bottom !important;
+        margin-top: auto; 
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <footer id="footer" class="footer">
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column is-2 right-line">
+            <aside class="menu">
+              <ul class="menu-list">
+                <li><a>About Us</a></li>
+                <li><a>Contact Us</a></li>
+                <li><a>FAQ</a></li>
+                <li><a class="has-text-danger">Need Help?</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="column is-8 right-line">
+            <div class="content has-text-centered">
+              <strong>JOIN OUR MAILING LIST & NEVER MISS AN OFFER AGAIN!</strong>
+            </div>
+            <div class="field is-horizontal">
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded has-icons-left">
+                    <input class="input is-medium" type="text" placeholder="Name">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control is-expanded has-icons-left">
+                    <input class="input is-medium is-success" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control is-expanded">
+                    <div class="select is-medium is-fullwidth">
+                      <select name="country">
+                        <option v-for="country in countries" :value="country.name">{{country.name}}</option>
+                      </select>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <button class="button is-medium is-dark">
+                  SUBMIT
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="column is-1"></div>
+          <div class="column is-1 join-button">
+            <div>
+              <div class="has-text-centered is-size-7">28 Days FREE Trial</div>
+              <div class="field is-grouped is-grouped-centered">
+                <p class="control">
+                  <button class="button is-medium is-primary">
+                    Join As Seller
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="content stick-bottom has-text-centered has-text-grey">
+              Terms and Conditions  |  Private Policies  |  Cookies<br>
+              &copy; 2018 Couponndiscount | All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script>
+      new Vue({
+        el: '#footer',
+        data: function () {
+          return {
+            countries: [
+              {name:"USA", image:"../static/images/icons/us.png"},
+              {name:"UK", image:"../static/images/icons/gb.png"},
+              {name:"Europe", image:"../static/images/icons/eu.png"},
+              {name:"Canada", image:"../static/images/icons/ca.png"},
+              {name:"Worldwide", image:"../static/images/icons/world.png"},
+            ]
+          }
+        },
+      })
+    </script>
+  </body>
+</html>
+ 

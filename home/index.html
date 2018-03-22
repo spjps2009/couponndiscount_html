@@ -92,10 +92,7 @@
       list-style-type: none;
       padding: 0;
     }
-    li {
-      display: inline-block;
-      margin: 0 10px;
-    }
+
     .section-title{
       border-color:#BFBFBF;
       border-style:solid;
@@ -158,10 +155,13 @@
     .is-65{
       font-size:.85rem !important;
     }
+    #footer{
+      margin-top:4rem;
+    }
   </style>
 </head>
 <body>
-<div id="menu"></div>
+<div id="menu_insert"></div>
 <div id="app">
   <div>
     <section class="section">
@@ -215,7 +215,7 @@
         </swiper>
       </div>
     </div>
-    <div v-for="deal_type in deal_types">
+    <div v-for="(deal_type, index) in deal_types">
       <section class="section">
         <div class="container section-container">
           <div class="section-line">
@@ -265,12 +265,19 @@
         </div>
       </div>
     </div>
+      <div class="columns is-centered" v-if="index!=deal_types.length-1">
+        <div class="column is-10">
+          <img src="http://via.placeholder.com/950x105">
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<div id="footer_insert"></div>
 <script>
   $(document).ready(function(e) {
-    $('#menu').load('../menu/index.html',function(){});
+    $('#menu_insert').load('../menu/index.html',function(){});
+    $('#footer_insert').load('../footer/index.html',function(){});
   });
   Vue.use(VueAwesomeSwiper);
   new Vue({
