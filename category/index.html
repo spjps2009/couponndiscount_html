@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.15/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3/dist/vue-awesome-swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script>
+  <style>
+    .button{
+      box-sizing:border-box;
+    }
+    .box{
+      box-sizing:border-box;
+    }
+    .title.product-title{
+      margin-top:1rem;
+      line-height: 1.3rem; 
+      height: 2.6rem; 
+      width: 100%; /* Use whatever width you want */
+      white-space: normal; /* Wrap lines of text */
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      -o-text-overflow: ellipsis; 
+    }
+    .subtitle{
+      margin-bottom:1rem;
+    }
+    .prices{
+      display: flex;
+      justify-content: center; /* align horizontal */
+      align-items: center; /* align vertical */
+    }
+    .strikethrough {
+      position: relative;
+    }
+    .strikethrough:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      right: 0;
+      border-top: 1px solid;
+      border-color: inherit;
 
+      -webkit-transform:rotate(-5deg);
+      -moz-transform:rotate(-5deg);
+      -ms-transform:rotate(-5deg);
+      -o-transform:rotate(-5deg);
+      transform:rotate(-5deg);
+    }
+    .regular-price{
+        margin-right:.5rem;
+    }
+    .box{
+        padding:1rem;
+    }
+    .product-title.title{
+        background-color:rgba(0, 0, 0, 0);
+        box-sizing:border-box;
+        cursor:pointer;
+        display:inline-block;
+        font-family:Lato, sans-serif;
+        text-decoration-color:rgb(70, 75, 81);
+        text-decoration-line:none;
+        text-decoration-style:solid;
+        text-size-adjust:100%;
+        touch-action:manipulation;
+        -webkit-font-smoothing:antialiased;
+    }
+    .product-title:hover{
+        color:rgb(255, 102, 0);
+    }
+    .swiper-button-next, .swiper-button-prev {
+        color: gray; 
+    }
+    .swiper-wrapper {
+      box-sizing: border-box;
+    }
+    .swiper-container{
+      padding-top: .1rem;;
+      padding-bottom: .1rem;;
+      padding-right: .5rem;;
+      padding-left: .1rem;
+      margin-bottom:20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .section-title{
+      border-color:#BFBFBF;
+      border-style:solid;
+      border-width:2px;
+      border-image-outset:0px;
+      border-image-repeat:stretch;
+      border-image-slice:100%;
+      border-image-source:none;
+      border-image-width:1;
+      height:2.6rem;
+      line-height:1.5rem;
+      padding-bottom:.5rem;
+      padding-left:2.5rem;
+      padding-right:2.5rem;
+      padding-top:.5rem;
+      text-align:center;
+      text-rendering:optimizeSpeed;
+      text-size-adjust:100%;
+      text-transform:none;
+      -webkit-box-decoration-break:clone;
+      -webkit-font-smoothing:antialiased;
+      margin:auto;
+      vertical-align:middle;
+    }
+    h1 {
+      display: inline-block;
+      padding: 0 15px;
+      position: relative;
+    }
+    h1:before,
+    h1:after {
+      background: #BFBFBF;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+        top: 50%;
+      width: 400%;
+    }
+    h1:before {
+      right: 100%;
+    }
+    h1:after {
+      left: 100%;
+    }
+    .section-line {
+      overflow: hidden;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .product-box{
+      border-radius:0;
+    }
+    .product-button{
+      border-radius:0;
+    }
+    .media-left.no-flag-margin{
+      margin-right:.3rem;
+    }
+    .is-65{
+      font-size:.85rem !important;
+    }
+    #footer{
+      margin-top:4rem;
+    }
+  </style>
+</head>
+<body>
+<div id="menu_insert"></div>
+<div id="app">
+  <div>
+    <section class="section">
+      <div class="container section-container">
+        <div class="section-line">
+          <h1 class="section-title has-text-primary is-size-5 has-text-weight-normal">Featured</h1>
+        </div>
+      </div>
+    </section>
+    <div class="container is-fluid">
+      <div class="column">
+        <swiper :options="swiperOptions"  v-if="urls">
+          <swiper-slide class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen is-one-sixth-fullhd" v-for="item in urls">
+              <a href="">
+                <div class="box product-box">
+                  <figure class="image is-1by1">
+                    <img class="featured-image is-spaced" :src="item" alt="">
+                  </figure>
+                  <p class="title product-title is-65 is-spaced is-left has-text-normal has-text-grey">Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel</p>
+                  <div class="media">
+                    <div class="media-left no-flag-margin">
+                      <figure class="image is-24x24">
+                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/icons/us.png" alt="Available in United States">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="subtitle is-7 platform has-text-grey">Amazon Fulfillment</p>
+                    </div>
+                  </div>
+                  <div class="prices has-text-centered">
+                    <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">$12.99</span>
+                    <span class="sale-price is-size-4 has-text-weight-semibold has-text-primary">$8.99</span>
+                  </div>
+                  <p class="has-text-centered subtitle is-7 has-text-semibold has-text-grey-dark">You Save 39%</p>
+                  <div class="has-text-centered">
+                    <a class="product-button button is-fullwidth is-primary">View Deal</a>
+                  </div>
+                </div>
+              </a>
+          </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+              <path fill="#7F7F7F" d="m0,22l22,-22l2.1,2.1l-19.9,19.9l19.9,19.9l-2.1,2.1l-22,-22l0,0l0,0z"/>
+            </svg>
+          </div>
+          <div class="swiper-button-next" slot="button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+              <path fill="#7F7F7F" d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z"/>
+            </svg>
+          </div>
+        </swiper>
+      </div>
+    </div>
+    <div>
+      <section class="section">
+        <div class="container section-container">
+          <div class="section-line">
+            <h1 class="section-title has-text-primary is-size-5 has-text-weight-normal">Home & Kitchen</h1>
+          </div>
+        </div>
+      </section>
+      <div class="container is-fluid">
+      <div class="columns">
+        <div class="column is-9">
+          <div class="columns is-multiline">
+            <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen is-one-fifth-fullhd" v-for="item in urls">
+              <a href="">
+                <div class="box product-box">
+                  <figure class="image is-1by1">
+                    <img class="featured-image" :src="item" alt="">
+                  </figure>
+                  <p class="title product-title is-65 is-spaced is-left has-text-normal has-text-grey">Mozzbi Premium Pizza Cutter Wheel Lime Stainless Steel</p>
+                  <div class="media">
+                    <div class="media-left no-flag-margin">
+                      <figure class="image is-24x24">
+                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/icons/us.png" alt="Available in United States">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="subtitle is-7 platform has-text-grey">Amazon Fulfillment</p>
+                    </div>
+                  </div>
+                  <div class="prices has-text-centered">
+                    <span class="regular-price strikethrough is-size-6 has-text-grey-light is-spaced">$12.99</span>
+                    <span class="sale-price is-size-4 has-text-weight-semibold has-text-primary">$8.99</span>
+                  </div>
+                  <p class="has-text-centered subtitle is-7 has-text-semibold has-text-grey-dark">You Save 39%</p>
+                  <div class="has-text-centered">
+                    <a class="product-button button is-fullwidth is-primary">View Deal</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column is-3">
+          <div>AD#1</div>
+          <img src="https://via.placeholder.com/250x750">
+          <div>AD#2</div>
+          <img src="https://via.placeholder.com/250x750">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer_insert"></div>
+<script>
+  $(document).ready(function(e) {
+    $('#menu_insert').load('../menu/index.html',function(){});
+    $('#footer_insert').load('../footer/index.html',function(){});
+  });
+  Vue.use(VueAwesomeSwiper);
+  new Vue({
+    el: '#app',
+    data: {
+      urls : [
+        'https://images-na.ssl-images-amazon.com/images/I/81JmGQr%2BPDL._AC_SR201,266_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/51ges-OAb7L._AC_US218_.jpg',
+        'https://couponndiscount.com/wp-content/uploads/2018/02/lime-pizza-cutter-mozzbi-min.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/51CPp7JCThL._AC_SR300,500_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/415fWAqEJ0L._AC_SR300,500_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/71vhCaHhHTL._SL1000_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/31ijpJhFJzL.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/61OVQPaEd%2BL._UL1500_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/81q55gf47iL._SL1419_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/51SKjwOC4cL._SL1020_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/61b2KYWvS2L._SL1003_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/61mfAI3pq5L._SL1100_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/51KhwpqbQ%2BL._SL1100_.jpg'
+      ],
+      deal_types:[
+        "Deals of the Day",
+        "Flash Deal",
+        "Deals Ending Soon"
+      ],
+      swiperOptions:{
+        slidesPerView: 5,
+        spaceBetween: 30,
+        slidesPerGroup: 5,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        autoplay: {
+          delay: 7000
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          1408: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+            slidesPerGroup: 5
+          },
+          1216: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            slidesPerGroup: 4
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            slidesPerGroup: 1
+          }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
