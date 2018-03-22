@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coupon N Discount</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style>
+      .menu-container.container.is-fluid{
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .dropdown-menu {
+        max-width: none;
+        width: 500px;
+      }
+
+      #top-menu{
+        height:2rem;
+        min-height: 2rem;
+      }
+      .custom-dropdown.navbar-dropdown.is-boxed{
+        background-color: rgba(51, 51, 51, 0.63);
+        border-radius: 0;
+      }
+      .custom-dropdown-item.navbar-item{
+        color:white;
+      }
+      .navbar-share-icon{
+        color:gray;
+      }
+      .country-image{
+        width:2rem;
+        margin-right:.6rem;
+      }
+      .custom-navbar{
+        padding-right:1rem;
+        padding-left: 1rem;
+      }
+      .full-width-searchbar{
+        width:100%;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <header id="header" class="header" v-on:scroll="handleScroll()">
+      <div class="container is-fluid menu-container">
+        <!-- START NAV -->
+        <nav class="navbar is-light custom-navbar" id="sticky">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="{% url 'products:index' %}">
+                <img src="../static/images/logo.png">
+              </a>
+              <div class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <!--
+          Using the v-bind: directive to reactively update the class attribute 'is-active' based on the showNav property.
+          -->
+            <div class="navbar-menu" :class="{ 'is-active': showNav }">
+              <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">
+                  <i class="fa fa-line-chart"></i>&nbsp;
+                  Statistics
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                  <i class="fa fa-list"></i>&nbsp;
+                  Current Products
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                  <i class="fa fa-plus"></i>&nbsp;
+                  Add Product
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                  <i class="fa fa-user-circle"></i>&nbsp;
+                  Subscription
+                </a>
+              </div>
+              <div class="navbar-end">
+                
+                <a class="navbar-item" href="https://bulma.io/">
+                  <i class="fa fa-user"></i>&nbsp;
+                  My Profile
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                  <i class="fa fa-bell"></i>&nbsp;
+                  <span class="tag is-rounded is-primary ">2</span>
+
+                </a>
+                <div class="navbar-item">
+                  <div class="field is-grouped">
+                    <p class="control">
+                      <a class="button is-dark" href="/login/">
+                        <span>Logout</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </nav>
+      </div>
+    </header>
+    <script>
+    new Vue({
+      el: '#header',
+      data: function () {
+        return {
+          showNav: false,
+          countries: [
+            {name:"USA", image:"../static/images/icons/us.png"},
+            {name:"UK", image:"../static/images/icons/gb.png"},
+            {name:"Europe", image:"../static/images/icons/eu.png"},
+            {name:"Canada", image:"../static/images/icons/ca.png"},
+            {name:"Worldwide", image:"../static/images/icons/world.png"},
+          ],
+          brands:[
+            "Mozzbi","IsMart","Minal Marks", "Baxter"
+          ]
+        }
+      },
+      components: {
+      },
+      methods: {
+        toggleNav: function (event) {
+          var nav = document.getElementById('nav-menu')
+          var className = nav.getAttribute('class')
+          if (className === 'nav-right nav-menu') {
+            nav.className = 'nav-right nav-menu is-active'
+          } else {
+            nav.className = 'nav-right nav-menu'
+          }
+        },
+        handleScroll () {
+          var bannerHeight = jQuery('#top-menu').height()
+    
+          if (jQuery(window).scrollTop() > bannerHeight) {
+            jQuery('#sticky').addClass('is-fixed-top')
+          } else {
+            jQuery('#sticky').removeClass('is-fixed-top')
+          }
+        }
+      },
+      created () {
+        window.addEventListener('scroll', this.handleScroll)
+      },
+      destroyed () {
+        window.removeEventListener('scroll', this.handleScroll)
+      }
+    })
+    </script>
+  </body>
+</html>
