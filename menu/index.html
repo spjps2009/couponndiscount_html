@@ -35,7 +35,13 @@
         width:2rem;
         margin-right:.6rem;
       }
-    
+      .custom-navbar{
+        padding-right:1rem;
+        padding-left: 1rem;
+      }
+      .full-width-searchbar{
+        width:100%;
+      }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
@@ -50,12 +56,12 @@
             <div class="navbar-menu">
               <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link custom-navbar-item" href="/documentation/overview/start/">
+                  <a class="navbar-link is-size-7 has-text-primary custom-navbar-item" href="/documentation/overview/start/">
                     Choose Platform
                   </a>
                   <div class="navbar-dropdown is-boxed custom-dropdown">
                     <div v-for="(country, index) in countries">
-                      <a class="navbar-item custom-dropdown-item">
+                      <a class="navbar-item  is-size-7 custom-dropdown-item">
                         <span>
                           <figure class="image is-2by1 country-image">
                             <img :src="country.image">
@@ -68,27 +74,17 @@
                   </div>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link custom-navbar-item" href="/documentation/overview/start/">
+                  <a class="navbar-link has-text-primary is-size-7 custom-navbar-item" href="/documentation/overview/start/">
                     Brand Deal
                   </a>
                   <div class="navbar-dropdown is-boxed custom-dropdown">
-                    <a class="navbar-item custom-dropdown-item" href="/documentation/overview/start/">
-                      Mozzbi
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                      IsMart
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/columns/basics/">
-                      Minal Marks
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item" href="https://bulma.io/documentation/layout/container/">
-                      Baxter
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item-all has-text-weight-bold has-text-primary" href="https://bulma.io/documentation/layout/container/">
+                    <div  v-for="brand in brands">
+                      <a class="navbar-item is-size-7 custom-dropdown-item" href="/documentation/overview/start/">
+                        {{brand}}
+                      </a>
+                      <hr class="navbar-divider">
+                    </div>
+                    <a class="navbar-item custom-dropdown-item-all has-text-weight-bold has-text-primary is-size-7" href="https://bulma.io/documentation/layout/container/">
                       View All
                     </a>
                   </div>
@@ -96,11 +92,11 @@
               </div>
               <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link custom-navbar-item" href="/documentation/overview/start/">
+                  <a class="navbar-link has-text-primary is-size-7 custom-navbar-item" href="/documentation/overview/start/">
                     Download App
                   </a>
                   <div class="navbar-dropdown is-boxed custom-dropdown">
-                    <a class="navbar-item custom-dropdown-item">
+                    <a class="navbar-item  is-size-7 custom-dropdown-item">
                       <span>
                         <figure class="image is-2by1 country-image">
                           <img src="../static/images/icons/android.png">
@@ -109,7 +105,7 @@
                       Android
                     </a>
                     <hr class="navbar-divider">
-                    <a class="navbar-item custom-dropdown-item">
+                    <a class="navbar-item  is-size-7 custom-dropdown-item">
                       <span>
                         <figure class="image is-2by1 country-image">
                           <img src="../static/images/icons/apple.png">
@@ -119,7 +115,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="navbar-item">
+                <div class="navbar-item  is-size-7">
                   <span class="icon navbar-share-icon">
                     <i class="fa fa-facebook"></i>
                   </span>
@@ -207,8 +203,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="navbar-item">
-                  <div class="field has-addons">
+                <div class="navbar-item full-width-searchbar">
+                  <div class="field has-addons  full-width-searchbar">
                     <div class="control is-expanded">
                       <input class="input is-fullwidth" type="text" placeholder="Search Deals">
                     </div>
@@ -252,6 +248,9 @@
             {name:"Europe", image:"../static/images/icons/eu.png"},
             {name:"Canada", image:"../static/images/icons/ca.png"},
             {name:"Worldwide", image:"../static/images/icons/world.png"},
+          ],
+          brands:[
+            "Mozzbi","IsMart","Minal Marks", "Baxter"
           ]
         }
       },
