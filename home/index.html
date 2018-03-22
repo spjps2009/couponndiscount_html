@@ -156,13 +156,13 @@
       margin-right:.3rem;
     }
     .is-65{
-      font-size:.85rem;
+      font-size:.85rem !important;
     }
   </style>
 </head>
 <body>
+<div id="menu"></div>
 <div id="app">
-  
   <div>
     <section class="section">
       <div class="container section-container">
@@ -184,7 +184,7 @@
                   <div class="media">
                     <div class="media-left no-flag-margin">
                       <figure class="image is-24x24">
-                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/us.png" alt="Available in United States">
+                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/icons/us.png" alt="Available in United States">
                       </figure>
                     </div>
                     <div class="media-content">
@@ -215,14 +215,15 @@
         </swiper>
       </div>
     </div>
-    <section class="section">
-      <div class="container section-container">
-        <div class="section-line">
-          <h1 class="section-title has-text-primary is-size-5 has-text-weight-normal">Deals of Day</h1>
+    <div v-for="deal_type in deal_types">
+      <section class="section">
+        <div class="container section-container">
+          <div class="section-line">
+            <h1 class="section-title has-text-primary is-size-5 has-text-weight-normal">{{deal_type}}</h1>
+          </div>
         </div>
-      </div>
-    </section>
-    <div class="container is-fluid">
+      </section>
+      <div class="container is-fluid">
       <div class="columns">
         <div class="column is-9">
           <div class="columns is-multiline">
@@ -236,7 +237,7 @@
                   <div class="media">
                     <div class="media-left no-flag-margin">
                       <figure class="image is-24x24">
-                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/us.png" alt="Available in United States">
+                        <img src="https://spjps2009.github.io/couponndiscount_html/static/images/icons/us.png" alt="Available in United States">
                       </figure>
                     </div>
                     <div class="media-content">
@@ -257,13 +258,20 @@
           </div>
         </div>
         <div class="column is-3">
-          <img src="https://via.placeholder.com/350x350">
+          AD#1
+          <img src="https://via.placeholder.com/250x750">
+          AD#2
+          <img src="https://via.placeholder.com/250x750">
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
 <script>
+  $(document).ready(function(e) {
+    $('#menu').load('../menu/index.html',function(){});
+  });
   Vue.use(VueAwesomeSwiper);
   new Vue({
     el: '#app',
@@ -277,7 +285,16 @@
         'https://images-na.ssl-images-amazon.com/images/I/71vhCaHhHTL._SL1000_.jpg',
         'https://images-na.ssl-images-amazon.com/images/I/31ijpJhFJzL.jpg',
         'https://images-na.ssl-images-amazon.com/images/I/61OVQPaEd%2BL._UL1500_.jpg',
-        'https://images-na.ssl-images-amazon.com/images/I/81q55gf47iL._SL1419_.jpg'
+        'https://images-na.ssl-images-amazon.com/images/I/81q55gf47iL._SL1419_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/51SKjwOC4cL._SL1020_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/61b2KYWvS2L._SL1003_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/61mfAI3pq5L._SL1100_.jpg',
+        'https://images-na.ssl-images-amazon.com/images/I/51KhwpqbQ%2BL._SL1100_.jpg'
+      ],
+      deal_types:[
+        "Deals of the Day",
+        "Flash Deal",
+        "Deals Ending Soon"
       ],
       swiperOptions:{
         slidesPerView: 5,
