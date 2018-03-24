@@ -20,6 +20,101 @@
 			margin-top:1rem;
 			margin-bottom:1rem;
 			}
+		.div1 {
+			margin-top:0rem;
+			margin-bottom:2rem;
+			}
+
+.hero
+  .title a
+    text-decoration: underline
+  
+h1
+  font-size: 2em
+
+$grey-lighter: hsl(0, 0%, 86%) !default
+$table-cell-border: 1px solid $grey-lighter !default
+$table-cell-border-width: 0 0 1px !default
+
+@media screen and (max-width: 800px)
+  .is-responsive
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    display: block
+    position: relative
+
+    td:empty:before
+      content: '\00a0'
+
+    th,
+    td
+      margin: 0
+      vertical-align: top
+
+    th
+      text-align: left
+
+    thead
+      border-right: solid 2px $grey-lighter
+      display: block
+      float: left
+
+      tr
+        display: block
+        padding: 0 10px 0 0
+
+        th::before
+          content: "\00a0"
+      td,
+      th
+        border-width: 0 0 1px
+
+    tbody
+      display: block
+      width: auto
+      position: relative
+      overflow-x: auto
+      white-space: nowrap
+
+      tr
+        display: inline-block
+        vertical-align: top
+
+    th
+      display: block
+      text-align: right
+
+    td
+      display: block
+      min-height: 1.25em
+      text-align: left
+
+    th,
+    td
+      &:last-child
+        border-bottom-width: 0
+
+    tr
+      &:last-child
+        td:not(:last-child)
+          border: $table-cell-border
+          border-width: $table-cell-border-width
+
+    &.is-bordered
+      td,
+      th
+        border-width: 1px
+      tr
+        td,
+        th
+          &:last-child
+            border-bottom-width: 1px
+        &:last-child
+          td,
+          th
+            border-width: 1px	
+			
 		</style>
 	</head>
 	<body>
@@ -167,7 +262,253 @@
 
 		  </div>
 		</div>
-  
+		
+		
+		
+		
+		<!--NEW PAGE  CHANGING PASSWORD -->
+		<div class="column is-6 is-offset-3"> 
+		<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				Changing or Updating Password
+			</strong> 
+		</div><hr/>
+
+
+		<!--NEW PAGE  CHANGING PASSWORD -->
+		<!--current password -->	
+		<div class="field">
+			<label class="label">
+				Current Password
+			</label>
+			 <div class="control">
+			<input class="input" type="text" placeholder="e.g Enter your current Password">
+			 </div>
+		</div>
+
+		<!--new password -->	
+				<div class="field">
+			<label class="label">
+				New Password
+			</label>
+			 <div class="control">
+			<input class="input" type="text" placeholder="e.g Enter your new Password">
+			 </div>
+		</div>
+		<!--retype new password -->	
+				<div class="field">
+			<label class="label">
+				Re-Type New Password
+			</label>
+			 <div class="control">
+			<input class="input" type="text" placeholder="e.g Re-Type Your New Password">
+			 </div>
+		</div>
+		<!--submit button -->	
+		<div class="control has-text-right">
+		<button class="button is-primary is-small has-text-weight-semibold">
+			Submit and Update Password
+		</button>
+		</div>
+		</div>
+	
+	
+		<!--NEW PAGE  CHANGING PASSWORD -->
+		
+		<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				My Current  Products and Subscriptions
+			</strong>
+			<div class="is-divider div1"></div>
+		</div>
+		
+			<div class="columns">
+			
+				  <div class="column is-one-third">
+					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							Next Payment  Due
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[29 March 2018]
+						</span>
+						</br>
+					</div>
+				  </div>
+				  
+				  
+				  
+				  <div class="column is-one-third">
+					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							Current Subscription 
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[FREE $0.00]
+						</span>
+						</br>
+					</div>
+				  </div>
+				  
+				  
+				  
+				  
+				  <div class="column is-one-third">
+					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							Next payment
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[$10.00]
+						</span>
+						</br>
+					</div>
+				  </div>
+			</div>		
+		
+		
+		
+		
+				<!--second row-->	
+	
+			<div class="columns">
+			
+			
+				  <div class="column is-one-third">
+					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							Next Payment 
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[$10.00]
+						</span>
+						</br>
+					</div>
+				  </div>
+				  
+				  
+				  
+				  <div class="column is-one-third">
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							No. of Product Eligible
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[10]
+						</span>
+						</br>
+					</div>
+				  </div>
+				  
+				  
+				  
+				  <div class="column is-one-third">
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							No. of Ads Eligible
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[3]
+						</span>
+						</br>
+					</div>
+				  </div>
+				
+			</div>
+			
+			
+			
+			
+			
+			
+
+		
+		
+		
+		
+		
+			<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				My Current  Products and Subscriptions
+			</strong>
+			<div class="is-divider div1"></div>
+			
+		
+		
+		
+		
+
+			  <table class="table is-responsive is-fullwidth is-size-7">
+				<thead>
+				  <tr>
+					<th>My Products</th>
+					<th><span class="badge is-badge-success is-badge-small" data-badge="FREE">
+						Subscription <br/> Max. 10 Products
+					</span></th>
+					<th><span class="badge is-badge-primary is-badge-small" data-badge="EXTRA">
+						Subscription <br/>  11-20 Products
+					</span></th>
+					<th><span class="badge is-badge-primary is-badge-small" data-badge="EXTRA">
+						Ad Package <br/>  Up to 3 Products
+					</span></th>
+					<th><span class="badge is-badge-primary is-badge-small" data-badge="EXTRA">
+						Ad Package <br/>  Up to 10 Products
+					</span></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Mozzbi Pizza Cutter</td>
+					<td><i class="fa fa-check"></i></td>
+					<td>$9.95</td>
+					<td><i class="fa fa-times"></i></td>
+					<td>
+<div class="control">
+  <label class="radio">
+    <input type="radio" name="answer">
+    Yes
+  </label>
+  <label class="radio">
+    <input type="radio" name="answer">
+    No
+  </label>
+</div</td>
+				  </tr>
+				  <tr>
+					<td>Mozzbi Pizza Cutter</td>
+					<td><i class="fa fa-check"></td>
+					<td>$9.95</td>
+					<td><i class="fa fa-times"></td>
+					<td>Lorem ipsum - cell E2</td>
+				  </tr>
+				  <tr>
+					<td>Mozzbi Pizza Cutter</td>
+					<td><i class="fa fa-check"></td>
+					<td>$9.95</td>
+					<td><i class="fa fa-times"></td>
+					<td>Lorem ipsum - cell E3</td>
+				  </tr>
+				  <tr>
+					<td>Mozzbi Pizza Cutter</td>
+					<td><i class="fa fa-check"></td>
+					<td>$9.95</td>
+					<td><i class="fa fa-times"></td>
+					<td>Lorem ipsum - cell E4</td>
+				  </tr>
+				  <tr>
+					<td>Mozzbi Pizza Cutter</td>
+					<td><i class="fa fa-check"></td>
+					<td>$9.95</td>
+					<td><i class="fa fa-times"></td>
+					<td>Lorem ipsum - cell E5</td>
+				  </tr>
+				  <tr>
+					<td>Mozzbi Pizza Cutter</td>
+					<td><i class="fa fa-check"></td>
+					<td>$9.95</td>
+					<td><i class="fa fa-times"></td>
+					<td>Lorem ipsum - cell E6</td>
+				  </tr>
+				</tbody>
+			  </table>
+
+			</div>	
+					
+		
 		
 	</body>
 </html>
