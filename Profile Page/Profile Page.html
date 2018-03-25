@@ -373,17 +373,7 @@ $table-cell-border-width: 0 0 1px !default
 			<div class="columns">
 			
 			
-				  <div class="column is-one-third">
-					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
-							Next Payment 
-						<br>
-						<span class="is-size-7 has-text-primary has-text-weight-semibold">
-							[$10.00]
-						</span>
-						</br>
-					</div>
-				  </div>
-				  
+
 				  
 				  
 				  <div class="column is-one-third">
@@ -398,30 +388,30 @@ $table-cell-border-width: 0 0 1px !default
 				  </div>
 				  
 				  
-				  
-				  <div class="column is-one-third">
-				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
-							No. of Ads Eligible
-						<br>
-						<span class="is-size-7 has-text-primary has-text-weight-semibold">
-							[3]
-						</span>
-						</br>
+				<!--No. of Ads Eligible-->  
+				<div class="column is-one-third">
+					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+						No. of Ads Eligible
+					<br>
+					<span class="is-size-7 has-text-primary has-text-weight-semibold">
+						[3]
+					</span>
+					</br>
 					</div>
-				  </div>
+				</div>
+				  
+				<!--Upgrade subscription button-->
+				<div class="column is-one-third">
+					<div class="control has-text-centered">
+						<button class="button is-dark is-small has-text-weight-semibold">
+							Upgrade Subscription
+						</button>
+					</div>
+				</div>
+				  			  
 				
 			</div>
 			
-			
-			
-			
-			
-			
-
-		
-		
-		
-		
 		
 			<div class="has-text-weight-semibold">
 			<strong class="is-size-5 has-text-primary">
@@ -429,93 +419,269 @@ $table-cell-border-width: 0 0 1px !default
 			</strong>
 			<div class="is-divider div1"></div>
 			
-		
-		
-		
-		
 
-			  <table class="table is-responsive is-fullwidth is-size-7">
-				<thead>
-				  <tr>
-					<th>My Products</th>
-					<th><span class="badge is-badge-success is-badge-small" data-badge="FREE">
-						Subscription <br/> Max. 10 Products
-					</span></th>
-					<th><span class="badge is-badge-primary is-badge-small" data-badge="EXTRA">
-						Subscription <br/>  11-20 Products
-					</span></th>
-					<th><span class="badge is-badge-primary is-badge-small" data-badge="EXTRA">
-						Ad Package <br/>  Up to 3 Products
-					</span></th>
-					<th><span class="badge is-badge-primary is-badge-small" data-badge="EXTRA">
-						Ad Package <br/>  Up to 10 Products
-					</span></th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
-					<td>Mozzbi Pizza Cutter</td>
-					<td><i class="fa fa-check"></i></td>
-					<td>$9.95</td>
-					<td><i class="fa fa-times"></i></td>
+		<table class="table is-responsive is-fullwidth is-size-7 table is-striped">
+			  
+			  
+				
+			<thead>
+				<!--Table  - Title 1-->
+				<tr>
+				
+					<th><span class ="has-text-grey-darker">
+						My Product Description
+					</th>
+						
+					<!--Table  - Title 2-->	
+						
+					<th><span class ="has-text-grey-darker">
+						Subscription
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						Max. 10 Products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						Free $0.00
+					</span><br/>
+					</th>
+			
+					<!--Table  - Title 3-->	
+						
+					<th><span class ="has-text-grey-darker">
+						Subscription
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						11-20 products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						$10.00
+					</span><br/>
+					</th>
+			
+					<!--Table  - Title 4-->	
+						
+					<th><span class ="has-text-primary">
+						Ad Package
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						Max. 3 Products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						$10.00
+					</span><br/>
+					</th>			
+					
+
+					<!--Table  - Title 5-->	
+						
+					<th><span class ="has-text-primary">
+						Ad Package
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						Max. 10 Products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						$40.00
+					</span><br/>
+					</th>								
+				
+				</tr>
+			</thead>
+				
+				
+				
+		<!--Table  - Body Contents 1-->			
+				
+			<tbody>
+				<tr>
+				
 					<td>
-					<div class="control">
-					  <label class="radio">
-						<input type="radio" name="answer">
-						Yes
-					  </label>
-					  <label class="radio">
-						<input type="radio" name="answer">
-						No
-					  </label>
-					</div</td>
-				  </tr>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>
 				  
-				  <tr>
-					<td>Mozzbi Pizza Cutter</td>
-					<td><i class="fa fa-check"></td>
-					<td>$9.95</td>
-					<td><i class="fa fa-times"></td>
-					<td><div class="tags has-addons">
-  <span class="tag">Yes</span>
-  <span class="tag is-primary">No</span>
-</div></td>
-				  </tr>
+		<!--Table  - Body Contents 2-->	
+
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>		
+		
+		
+		
+		
+		<!--Table  - Body Contents 3-->	
+				
+				
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>				
+				
+				
+				
+				
+				
+		<!--Table  - Body Contents 4-->	
+						
+						
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>						
+						
+						
+						
+						
+						
+		<!--Table  - Body Contents 5-->	
+								
+								
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>								
+										
+										
+										
+		<!--Table  - Body Contents 6-->	
 				  
-				  <tr>
-					<td>Mozzbi Pizza Cutter</td>
-					<td><i class="fa fa-check"></td>
-					<td>$9.95</td>
-					<td><i class="fa fa-times"></td>
-					<td>Lorem ipsum - cell E3</td>
-				  </tr>
-				  <tr>
-					<td>Mozzbi Pizza Cutter</td>
-					<td><i class="fa fa-check"></td>
-					<td>$9.95</td>
-					<td><i class="fa fa-times"></td>
-					<td>Lorem ipsum - cell E4</td>
-				  </tr>
-				  <tr>
-					<td>Mozzbi Pizza Cutter</td>
-					<td><i class="fa fa-check"></td>
-					<td>$9.95</td>
-					<td><i class="fa fa-times"></td>
-					<td>Lorem ipsum - cell E5</td>
-				  </tr>
-				  <tr>
-					<td>Mozzbi Pizza Cutter</td>
-					<td><i class="fa fa-check"></td>
-					<td>$9.95</td>
-					<td><i class="fa fa-times"></td>
-					<td>Lorem ipsum - cell E6</td>
-				  </tr>
-				</tbody>
-			  </table>
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>
+		  
+				  
+			</tbody>
+		</table>
 
 			</div>	
-					
-		
-		
+		<span class="has-text-primary is-size-7 has-text-weight-bold">
+			IMPORTANT NOTES:
+		</span>	
+		<span class="is-size-7 has-text-weight-semibold has-text-justified">
+			<br/>1. All products under <strong>FREE subscription</strong> is only visible under category and customer search results however you're product may appear under ad pages/section as a complementary.
+			<br/>2. If you wish your to get maximum exposure for your product, please subscribe to out ads packages.
+		</span>	
 	</body>
 </html>
