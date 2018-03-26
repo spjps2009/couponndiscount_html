@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	 <!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/dist/bulma-extensions.min.css">
+		<style>
+			.margin1 {
+			margin-left:3rem;
+			margin-right:3rem;
+			margin-top:1rem;
+			margin-bottom:2rem;
+			}
+		.hero
+		  .title a
+			text-decoration: underline
+		  
+		h1
+		  font-size: 2em
+
+		$grey-lighter: hsl(0, 0%, 86%) !default
+		$table-cell-border: 1px solid $grey-lighter !default
+		$table-cell-border-width: 0 0 1px !default
+
+		@media screen and (max-width: 800px)
+		  .is-responsive
+			width: 100%
+			border-collapse: collapse
+			border-spacing: 0
+			display: block
+			position: relative
+
+			td:empty:before
+			  content: '\00a0'
+
+			th,
+			td
+			  margin: 0
+			  vertical-align: top
+
+			th
+			  text-align: left
+
+			thead
+			  border-right: solid 2px $grey-lighter
+			  display: block
+			  float: left
+
+			  tr
+				display: block
+				padding: 0 10px 0 0
+
+				th::before
+				  content: "\00a0"
+			  td,
+			  th
+				border-width: 0 0 1px
+
+			tbody
+			  display: block
+			  width: auto
+			  position: relative
+			  overflow-x: auto
+			  white-space: nowrap
+
+			  tr
+				display: inline-block
+				vertical-align: top
+
+			th
+			  display: block
+			  text-align: right
+
+			td
+			  display: block
+			  min-height: 1.25em
+			  text-align: left
+
+			th,
+			td
+			  &:last-child
+				border-bottom-width: 0
+
+			tr
+			  &:last-child
+				td:not(:last-child)
+				  border: $table-cell-border
+				  border-width: $table-cell-border-width
+
+			&.is-bordered
+			  td,
+			  th
+				border-width: 1px
+			  tr
+				td,
+				th
+				  &:last-child
+					border-bottom-width: 1px
+				&:last-child
+				  td,
+				  th
+					border-width: 1px	
+		</style>
+	</head>
+	<body>
+		<strong class="is-size-4 has-text-primary margin1">
+			My Product List
+		</strong> <hr/>
+		<div class="has-text-weight-semibold margin1">
+		<table class="table is-responsive is-fullwidth is-size-7 table is-striped">
+			<thead>
+				<!--Table  - Title 1-->
+				<tr>				
+					<th><span class ="has-text-grey-darker"></span>
+						Status
+					</th>
+					<!--Table  - Title 2-->	
+					<th><span class ="has-text-grey-darker"></span>
+						Image
+					</th>
+					<!--Table  - Title 3-->	
+					<th><span class ="has-text-grey-darker"></span>
+						Description
+					</th>
+					<!--Table  - Title 4-->	
+					<th><span class ="has-text-grey-darker"></span>
+						Selling Platform
+					</th>					
+					<!--Table  - Title 5-->							
+					<th><span class ="has-text-grey-light"></span>
+						Expiry
+					</th>
+					<!--Table  - Title 6-->							
+					<th><span class ="has-text-grey-danger"></span>
+						Action
+					</th>							
+					<!--Table  - Title 7-->							
+					<th><span class ="has-text-grey-d"></span>
+						Delete
+					</th>			
+				</tr>
+			</thead>				
+		<!--Table  - Body Contents 1-->							
+			<tbody>
+				<tr>				
+					<td>
+					<span class="tag is-success">
+						Active
+					</span>
+					</td>					
+					<td>
+						<figure class="image is-64x64">
+						<img src="https://bulma.io/images/placeholders/256x256.png">
+						</figure>
+					</td>					
+					<td>
+						Mozzbi Pizza Cutter Wheel Available in three colour Red, Blue and Lime
+					</td>					
+					<td>
+						[USA Currency USD $]
+					</td>					
+					<td>
+						12 March 2018
+					</td>
+					<td>
+						<span class="tag is-light">Edit</span>
+					</td>
+					<td>
+						<span class="tag is-danger">Delete</span>
+					</td>						
+				</tr>				  
+		<!--Table  - Body Contents 2-->	
+				<tr>				
+					<td>
+					<span class="tag is-success">
+						Active
+					</span>
+					</td>					
+					<td>
+						<figure class="image is-64x64">
+						<img src="https://bulma.io/images/placeholders/256x256.png">
+						</figure>
+					</td>					
+					<td>
+						Mozzbi Pizza Cutter Wheel Available in three colour Red, Blue and Lime
+					</td>					
+					<td>
+						[Europe Currency EUR €]
+					</td>					
+					<td>
+						12 March 2018
+					</td>
+					<td>
+						<span class="tag is-light">Edit</span>
+					</td>					
+					<td>
+						<span class="tag is-danger">Delete</span>
+					</td>						
+				</tr>		
+		<!--Table  - Body Contents 3-->	
+				<tr>
+					<td>
+					<span class="tag is-success">
+						Active
+					</span>
+					</td>
+					<td>
+						<figure class="image is-64x64">
+						<img src="https://bulma.io/images/placeholders/256x256.png">
+						</figure>
+					</td>
+					<td>
+						Mozzbi Pizza Cutter Wheel Available in three colour Red, Blue and Lime
+					</td>
+					<td>
+						[Worldwide Currency USD $]
+					</td>
+					<td>
+						12 March 2018
+					</td>
+					<td>
+						<span class="tag is-light">Edit</span>
+					</td>					
+					<td>
+						<span class="tag is-danger">Delete</span>
+					</td>						
+				</tr>				
+		<!--Table  - Body Contents 4-->	
+				<tr>
+					<td>
+					<span class="tag is-danger">
+						Inavtive
+					</span>
+					</td>
+					<td>
+						<figure class="image is-64x64">
+						<img src="https://bulma.io/images/placeholders/256x256.png">
+						</figure>
+					</td>
+					<td>
+						Mozzbi Pizza Cutter Wheel Available in three colour Red, Blue and Lime
+					</td>
+					<td>
+						[UK Currency GBP £]
+					</td>
+					<td>
+						12 March 2018
+					</td>
+					<td>
+						<span class="tag is-light">Re-List</span>
+					</td>					
+					<td>
+						<span class="tag is-danger">Delete</span>
+					</td>						
+				</tr>						
+		<!--Table  - Body Contents 5-->	
+				<tr>
+					<td>
+					<span class="tag is-success">
+						Active
+					</span>
+					</td>
+					<td>
+						<figure class="image is-64x64">
+						<img src="https://bulma.io/images/placeholders/256x256.png">
+						</figure>
+					</td>
+					<td>
+						Mozzbi Pizza Cutter Wheel Available in three colour Red, Blue and Lime
+					</td>
+					<td>
+						[USA Currency USD $]
+					</td>
+					<td>
+						12 March 2018
+					</td>
+					<td>
+						<span class="tag is-light">Edit</span>
+					</td>
+					<td>
+						<span class="tag is-danger">Delete</span>
+					</td>										
+				</tr>								
+		<!--Table  - Body Contents 6-->	
+				<tr>
+					<td>
+					<span class="tag is-danger">
+						Inactive
+					</span>
+					</td>
+					<td>
+						<figure class="image is-64x64">
+						<img src="https://bulma.io/images/placeholders/256x256.png">
+						</figure>
+					</td>
+					<td>
+						Mozzbi Pizza Cutter Wheel Available in three colour Red, Blue and Lime
+					</td>
+					<td>
+						[USA Currency USD $]
+					</td>
+					<td>
+						12 March 2018
+					</td>
+					<td>
+						<span class="tag is-light">Re-List</span>
+					</td>					
+					<td>
+						<span class="tag is-danger">Delete</span>
+					</td>						
+				</tr>
+			</tbody>
+		</table>
+			</div>	<hr/>
+			
+		<span class="has-text-primary is-size-7 has-text-weight-bold margin1">
+			IMPORTANT NOTES:
+		</span>	
+		<span class="is-size-7 has-text-weight-semibold has-text-justified margin1">
+			<br/> Please contact admin if you having difficulty updating.
+		</span>	
+	</body>
+</html>
