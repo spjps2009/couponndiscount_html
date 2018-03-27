@@ -3,35 +3,101 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
   <body>
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical is-parent is-7">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <div class="subtitle">Introduction</div>
-          </article>
-        </div>
-        <div class="tile">
+    <div id="menu_insert"></div>
+    <section id="dashboard" class="section">
+      <div class="container">
+        <h1 class="title has-text-primary">Home</h1>
+        <hr>
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-parent is-6">
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <div class="subtitle">Introduction</div>
+                <figure class="image is-16by9">
+                  <img src="https://bulma.io/images/placeholders/128x128.png">
+                </figure>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </article>
+            </div>
+            <div class="tile">
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <div class="subtitle">New Products</div>
+                  <div class="box" v-for="url in urls">
+                    <article class="media">
+                      <div class="media-left">
+                        <figure class="image is-64x64">
+                          <img :src="url">
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <div class="content">
+                          <p>
+                            <strong>Mozzbi Recover Strap with D-Shackle, Polyester 4inch Wide, 6M Long with D ring Shackles</strong> <small>by Ahsanul</small> <small>31m Ago</small>
+                            <br>
+                          </p>
+                        </div>
+                        <nav class="level is-mobile">
+                          <div class="level-left">
+                            <a class="level-item">
+                              <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                            </a>
+                            <a class="level-item">
+                              <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                            </a>
+                            <a class="level-item">
+                              <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
           <div class="tile is-parent">
-            <article class="tile is-child box">
-              <div class="subtitle">New Products</div>
-            </article>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child box">
+                <div class="subtitle">Statistics</div>
+                <figure class="image is-16by9">
+                  <img src="http://www.serif.com/appresources/PPX7/Tutorials/en-us/graphics/tutorials/charts_column_added.jpg">
+                </figure>
+                <span class="has-text-centered">Daily Clicks</span>
+              </article>
+              <article class="tile is-child box">
+                <div class="subtitle">Subscription</div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
-      <div class="tile is-parent">
-        <div class="tile is-parent is-vertical">
-          <article class="tile is-child box">
-            <div class="subtitle">Statistics</div>
-          </article>
-          <article class="tile is-child box">
-            <div class="subtitle">Subscription</div>
-          </article>
-        </div>
-      </div>
-    </div>
+    </section>
+
+    <div id="footer_insert"></div>
+    
+    <script>
+      $(document).ready(function(e) {
+        $('#menu_insert').load('../seller_menu/index.html',function(){});
+        $('#footer_insert').load('../footer/index.html',function(){});
+      });
+      new Vue({
+        el: '#dashboard',
+        data: {
+          urls : [
+            'https://images-na.ssl-images-amazon.com/images/I/81JmGQr%2BPDL._AC_SR201,266_.jpg',
+            'https://images-na.ssl-images-amazon.com/images/I/51ges-OAb7L._AC_US218_.jpg',
+            'https://couponndiscount.com/wp-content/uploads/2018/02/lime-pizza-cutter-mozzbi-min.jpg',
+          ],
+        }
+      });
+    </script>
   </body>
 </html>
