@@ -5,7 +5,7 @@ Product Page
 Category Page 
 	Design: ✔  HTML: ✔
 Add Product Page
-	Design: ✔  HTML: ✖
+	Design: ✔  HTML: ✔
 Notification page
 	Design: ✔  HTML: ✔
 Profile page
