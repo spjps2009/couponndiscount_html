@@ -1,18 +1,34 @@
 Home Page
-	Design: ✔  HTML: ✖
+	Design: ✔  HTML: ✔
 Product Page
-	Design: ✔  HTML: ✖
+	Design: ✔  HTML: ✔
 Category Page 
-	Design: ✔  HTML: ✖
+	Design: ✔  HTML: ✔
 Add Product Page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✖
 Notification page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✔
 Profile page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✔
 Change password page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✔
 My subscription page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✔
 Admin page
-	Design: ✖  HTML: ✖
+	Design: ✔  HTML: ✖
+Seller page
+	Design: ✔  HTML: ✖
+Contact Us- Buyer page
+	Design: ✔  HTML: ✔
+Contact Us Seller page
+	Design: ✔  HTML: ✔
+Dashboard
+	Design: ✔  HTML: ✔
+Edit page
+	Design: ✔  HTML: ✔
+Login page
+	Design: ✔  HTML: ✔
+Menu
+	Design: ✔  HTML: ✔
+Seller Menu
+	Design: ✔  HTML: ✔
