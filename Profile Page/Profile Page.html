@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	 <!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/dist/bulma-extensions.min.css">
+		<style>
+			.box1 {
+			Width:8rem;
+			height: 8rem;
+			}
+			.file1 {
+			margin-top:1rem;
+			margin-bottom:1rem;
+			}
+		.div1 {
+			margin-top:0rem;
+			margin-bottom:2rem;
+			}
+
+		.hero
+		  .title a
+			text-decoration: underline
+		  
+		h1
+		  font-size: 2em
+
+		$grey-lighter: hsl(0, 0%, 86%) !default
+		$table-cell-border: 1px solid $grey-lighter !default
+		$table-cell-border-width: 0 0 1px !default
+
+		@media screen and (max-width: 800px)
+		  .is-responsive
+			width: 100%
+			border-collapse: collapse
+			border-spacing: 0
+			display: block
+			position: relative
+
+			td:empty:before
+			  content: '\00a0'
+
+			th,
+			td
+			  margin: 0
+			  vertical-align: top
+
+			th
+			  text-align: left
+
+			thead
+			  border-right: solid 2px $grey-lighter
+			  display: block
+			  float: left
+
+			  tr
+				display: block
+				padding: 0 10px 0 0
+
+				th::before
+				  content: "\00a0"
+			  td,
+			  th
+				border-width: 0 0 1px
+
+			tbody
+			  display: block
+			  width: auto
+			  position: relative
+			  overflow-x: auto
+			  white-space: nowrap
+
+			  tr
+				display: inline-block
+				vertical-align: top
+
+			th
+			  display: block
+			  text-align: right
+
+			td
+			  display: block
+			  min-height: 1.25em
+			  text-align: left
+
+			th,
+			td
+			  &:last-child
+				border-bottom-width: 0
+
+			tr
+			  &:last-child
+				td:not(:last-child)
+				  border: $table-cell-border
+				  border-width: $table-cell-border-width
+
+			&.is-bordered
+			  td,
+			  th
+				border-width: 1px
+			  tr
+				td,
+				th
+				  &:last-child
+					border-bottom-width: 1px
+				&:last-child
+				  td,
+				  th
+					border-width: 1px	
+			
+		</style>
+	</head>
+	<body>
+		<div class="columns column is-10 is-offset-2">
+		<!--my profile box-->
+			<div class="column">
+			  <div class="box is-size-1 has-text-centered fa fa-user has-text-grey box1">
+			  
+				<div class="is-size-6 has-text-primary">
+				My Profile
+				</div>
+			  </div>
+			</div>
+		<!--change password box-->	
+			<div class="column">
+			  <div class="box is-size-1 has-text-centered fa fa-lock has-text-grey box1">
+			  
+				<div class="is-size-6 has-text-primary">
+				Change Password
+				</div>
+			  </div>
+			</div>
+		<!--my subscription box-->	
+			  <div class="column">
+			  <div class="box is-size-1 has-text-centered fa fa-dollar has-text-grey box1">
+			  
+				<div class="is-size-6 has-text-primary">
+				My Subscription
+				</div>
+			  </div>
+			</div>
+		</div>
+		<!--TITLE: CREATE NEW LISTING-->
+		<div class="column is-10 is-offset-1"> 
+		<!--My profile titles-->
+		<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				My Profile
+			</strong> 
+			<span class="has-text-grey is-size-7 has-text-weight-normal">
+				Brand- Image and Logo (Optional) Required if subscribing Brand Ad
+			</span>
+		</div>
+		<div class="is-divider div1"></div>
+
+		<!--seller logo or icon-->	
+		<div class="columns">
+			<div class="column is-3">
+				<figure class="image is-128x128">
+					<img src="https://bulma.io/images/placeholders/128x128.png">
+					<div class="field">
+					  <div class="file is-small">
+						<label class="file-label">
+						  <input class="file-input" type="file" name="resume">
+							<span class="file-cta file1">
+								<span class="file-icon">
+									<i class="fa fa-upload"></i>
+								</span>
+								<span class="file-label">
+									upload
+								</span>
+							</span>
+						</label>
+					  </div>
+					</div>
+				</figure>
+			</div>
+			<div class="column is-9">
+				<div class="field has-text-centered">
+				<img src="logo.png">
+					<div class="control">
+					<div class="field">
+					  <div class="file is-small">
+						<label class="file-label">
+						  <input class="file-input" type="file" name="resume">
+						  <span class="file-cta file1">
+							<span class="file-icon">
+							  <i class="fa fa-upload"></i>
+							</span>
+							<span class="file-label">
+							  Upload
+							</span>
+						  </span>
+						</label>
+					  </div>
+					</div>
+					</div>
+		<!--my details-->			
+					<div class="field">
+					  <label class="label has-text-left is-size-7">
+						Seller or Company Name
+					</label>
+						<div class="control">
+							<input class="input" type="text" placeholder="[Auto Fill]">
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+		<!--my details-->
+		<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				My Details
+			</strong> 
+		</div>
+		<div class="is-divider div1"></div>
+		<!--details contents -->
+		<!--full name -->
+		<div class="columns">
+			<div class="column is-half is-size-7 has-text-weight-semibold">
+				Full Name
+			<h5> 
+				[Auto Full Name input]]
+			</h5>
+
+			</div>
+			<div class="column is-half is-size-7 has-text-weight-semibold">
+				[Location] City or Country
+			<h5> 
+				[Auto Location City or Country input]
+			</h5>
+			</div>
+		</div>
+		<!--contact number -->	
+		<div class="columns">
+			<div class="column is-half is-size-7 has-text-weight-semibold">
+					Contact Number
+				<h5>
+					[Auto Contact Number input]
+				</h5>
+			</div>
+			<div class="column is-half is-size-7 has-text-weight-semibold">
+					Email Address
+				<h5>
+					[Auto Email Address input]
+				</h5>
+			</div>
+		</div>
+		
+		<div class="columns">
+			<div class="column is-half is-size-7 has-text-weight-semibold">
+				Website (Optional)
+			<h5>
+				[Auto Website (Optional) input]
+			</h5>
+			</div>
+			<div class="column is-half has-text-right">
+			<a class="button is-dark is-small">
+				Edit
+			</a>
+			<a class="button is-dark is-small is-primary">
+				Update
+			</a>
+			</div>
+		</div>
+		
+		<!--NEW PAGE  CHANGING PASSWORD -->
+		<div class="column is-6 is-offset-3"> 
+		<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				Changing or Updating Password
+			</strong> 
+		</div><hr/>
+
+		<!--NEW PAGE  CHANGING PASSWORD -->
+		<!--current password -->	
+		<div class="field">
+			<label class="label">
+				Current Password
+			</label>
+			 <div class="control">
+			<input class="input" type="text" placeholder="e.g Enter your current Password">
+			 </div>
+		</div>
+
+		<!--new password -->	
+				<div class="field">
+			<label class="label">
+				New Password
+			</label>
+			 <div class="control">
+			<input class="input" type="text" placeholder="e.g Enter your new Password">
+			 </div>
+		</div>
+		<!--retype new password -->	
+				<div class="field">
+			<label class="label">
+				Re-Type New Password
+			</label>
+			 <div class="control">
+			<input class="input" type="text" placeholder="e.g Re-Type Your New Password">
+			 </div>
+		</div>
+		<!--submit button -->	
+		<div class="control has-text-right">
+		<button class="button is-primary is-small has-text-weight-semibold">
+			Submit and Update Password
+		</button>
+		</div>
+		</div>
+	
+	
+		<!--NEW PAGE  CHANGING PASSWORD -->
+		
+		<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				My Current  Products and Subscriptions
+			</strong>
+			<div class="is-divider div1"></div>
+		</div>
+		
+		<div class="columns">
+		
+			  <div class="column is-one-third">
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+						Next Payment  Due
+					<br>
+					<span class="is-size-7 has-text-primary has-text-weight-semibold">
+						[29 March 2018]
+					</span>
+					</br>
+				</div>
+			  </div>
+		  
+			  <div class="column is-one-third">
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+						Current Subscription 
+					<br>
+					<span class="is-size-7 has-text-primary has-text-weight-semibold">
+						[FREE $0.00]
+					</span>
+					</br>
+				</div>
+			  </div>
+			  
+			  <div class="column is-one-third">
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+						Next payment
+					<br>
+					<span class="is-size-7 has-text-primary has-text-weight-semibold">
+						[$10.00]
+					</span>
+					</br>
+				</div>
+			  </div>
+		</div>		
+			<!--second row-->	
+	
+			<div class="columns">
+			  
+				  <div class="column is-one-third">
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+							No. of Product Eligible
+						<br>
+						<span class="is-size-7 has-text-primary has-text-weight-semibold">
+							[10]
+						</span>
+						</br>
+					</div>
+				  </div>
+				  
+				  
+				<!--No. of Ads Eligible-->  
+				<div class="column is-one-third">
+					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+						No. of Ads Eligible
+					<br>
+					<span class="is-size-7 has-text-primary has-text-weight-semibold">
+						[3]
+					</span>
+					</br>
+					</div>
+				</div>
+
+			</div>
+			
+		
+			<div class="has-text-weight-semibold">
+			<strong class="is-size-5 has-text-primary">
+				My Current  Products and Subscriptions
+			</strong>
+			<div class="is-divider div1"></div>
+
+		<table class="table is-responsive is-fullwidth is-size-7 table is-striped">
+				
+			<thead>
+				<!--Table  - Title 1-->
+				<tr>
+				
+					<th><span class ="has-text-grey-darker">
+						My Product Description
+					</th>
+						
+					<!--Table  - Title 2-->	
+						
+					<th><span class ="has-text-grey-darker">
+						Subscription
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						Max. 10 Products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						Free $0.00
+					</span><br/>
+					</th>
+			
+					<!--Table  - Title 3-->	
+						
+					<th><span class ="has-text-grey-darker">
+						Subscription
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						11-20 products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						$10.00
+					</span><br/>
+					</th>
+			
+					<!--Table  - Title 4-->	
+						
+					<th><span class ="has-text-primary">
+						Ad Package
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						Max. 3 Products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						$10.00
+					</span><br/>
+					</th>			
+					
+
+					<!--Table  - Title 5-->	
+						
+					<th><span class ="has-text-primary">
+						Ad Package
+					</span><br/>
+					
+					<span class ="has-text-grey">
+						Max. 10 Products
+					</span><br/>
+					
+					<span class ="has-text-danger">
+						$40.00
+					</span><br/>
+					</th>								
+				
+				</tr>
+			</thead>
+				
+				
+				
+		<!--Table  - Body Contents 1-->			
+				
+			<tbody>
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>
+				  
+		<!--Table  - Body Contents 2-->	
+
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>		
+	
+		<!--Table  - Body Contents 3-->	
+				
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>				
+			
+		<!--Table  - Body Contents 4-->	
+						
+						
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>						
+					
+		<!--Table  - Body Contents 5-->	
+								
+				<tr>
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+				</tr>								
+									
+		<!--Table  - Body Contents 6-->	
+				  
+				<tr>
+				
+					<td>
+						Mozzbi Pizza Cutter
+					</td>
+					
+					<td>
+						<i class="fa fa-check has-text-success"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+					
+					<td>
+						<i class="fa fa-times has-text-danger"></i>
+					</td>
+	
+				</tr>
+		  
+				  
+			</tbody>
+		</table>
+
+			</div>	<hr/>
+			<!--Upgrade subscription button-->
+			
+			<div class="control has-text-right">
+				<button class="button is-dark is-small has-text-weight-semibold">
+					Upgrade Subscription
+				</button>
+			</div>	
+			
+			
+		<span class="has-text-primary is-size-7 has-text-weight-bold">
+			IMPORTANT NOTES:
+		</span>	
+		<span class="is-size-7 has-text-weight-semibold has-text-justified">
+			<br/>1. All subscription and packages are based on 28 days period.
+			<br/>2. All products under <strong>FREE subscription</strong> is only visible under category and customer search results however you're product may appear under ad pages/section as a complementary.
+			<br/>3. If you wish your to get maximum exposure for your product, please subscribe to out ads packages.
+		</span>	
+	</body>
+</html>

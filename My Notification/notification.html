@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" integrity="sha256-Ll4Z8mX5+0pGybXIES6J8YjUZUBFcQsJfS00wbXdbG8=" crossorigin="anonymous" />
+	 <!--Script-->
+	    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.js"></script>
+	<!--link ref-->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/bulma-accordion/dist/bulma-accordion.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@1/dist/bulma-extensions.min.css">
+		<style>
+			.not1{
+				margin-left:15rem;
+				margin-right:15rem;
+			hr{
+			margin-top:0rem;
+			}
+
+			.hero
+			  .title a
+				text-decoration: underline
+			h1
+			  font-size: 2em
+
+			$grey-lighter: hsl(0, 0%, 86%) !default
+			$table-cell-border: 1px solid $grey-lighter !default
+			$table-cell-border-width: 0 0 1px !default
+
+			@media screen and (max-width: 800px)
+			  .is-responsive
+				width: 100%
+				border-collapse: collapse
+				border-spacing: 0
+				display: block
+				position: relative
+
+				td:empty:before
+				  content: '\00a0'
+
+				th,
+				td
+				  margin: 0
+				  vertical-align: top
+
+				th
+				  text-align: left
+
+				thead
+				  border-right: solid 2px $grey-lighter
+				  display: block
+				  float: left
+
+				  tr
+					display: block
+					padding: 0 10px 0 0
+
+					th::before
+					  content: "\00a0"
+				  td,
+				  th
+					border-width: 0 0 1px
+
+				tbody
+				  display: block
+				  width: auto
+				  position: relative
+				  overflow-x: auto
+				  white-space: nowrap
+
+				  tr
+					display: inline-block
+					vertical-align: top
+
+				th
+				  display: block
+				  text-align: right
+
+				td
+				  display: block
+				  min-height: 1.25em
+				  text-align: left
+
+				th,
+				td
+				  &:last-child
+					border-bottom-width: 0
+
+				tr
+				  &:last-child
+					td:not(:last-child)
+					  border: $table-cell-border
+					  border-width: $table-cell-border-width
+
+				&.is-bordered
+				  td,
+				  th
+					border-width: 1px
+				  tr
+					td,
+					th
+					  &:last-child
+						border-bottom-width: 1px
+					&:last-child
+					  td,
+					  th
+						border-width: 1px
+		</style>
+	</head>
+	<body>
+		<div class="has-text-weight-semibold has-text-left not1">
+			<strong class="is-size-4">
+				My Notification
+			</strong> 
+			<span class="has-text-danger is-size-6 has-text-weight-bold">
+				NEW
+			</span>
+			<hr/>
+		</div>
+		<!--Notification box-->
+		<div class="notification has-text-grey not1">
+			<h1 class="title has-text-centered has-text-grey">
+				Your Subscription expires in 10 days
+			</h1><hr/>
+			<h6 class="subtitle is-6 has-text-primary">
+				Date [17 March 2018]
+			</h6>
+			  Lorem ipsum dolor sit amet, consectetur
+			  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+			  consectetur adipiscing elit
+		</div>
+		<div class="has-text-weight-semibold has-text-left not1">
+			<strong class="is-size-5">
+				Archives
+			</strong> 
+			<span class="has-text-grey is-size-6 has-text-weight-bold">
+				Old
+			</span>
+			<hr/>
+		</div>
+		<!--table-->
+		<table class="table is-responsive not1">
+			<thead>
+				<tr>
+					<th>
+						Date
+					</th>
+					<th>
+						Notification Subject
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						17/03/2018
+					</td>
+					<td>
+						Your Subscription expires in 10 days
+					</td>
+				</tr>
+				<tr>
+					<td>
+						17/03/2018
+					</td>
+					<td>
+						Your Subscription expires in 10 days Your Subscription expires in 10 days Your Subscription expires in 10 days Your Subscription expires in 10 days
+					</td>
+				</tr>
+				<tr>
+					<td>
+						17/03/2018
+					</td>
+					<td>
+						Your Subscription expires in 10 days
+					</td>
+				</tr>
+				<tr>
+					<td>
+						17/03/2018
+					</td>
+					<td>
+						Your Subscription expires in 10 days
+					</td>
+				</tr>
+				<tr>
+					<td>
+						17/03/2018
+					</td>
+					<td>
+						Your Subscription expires in 10 days
+					</td>
+				</tr>
+				<tr>
+					<td>
+						17/03/2018
+					</td>
+					<td>
+						Your Subscription expires in 10 days
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
