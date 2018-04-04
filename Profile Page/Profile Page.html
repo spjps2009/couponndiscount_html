@@ -24,18 +24,14 @@
 			margin-top:0rem;
 			margin-bottom:2rem;
 			}
-
 		.hero
 		  .title a
 			text-decoration: underline
-		  
 		h1
 		  font-size: 2em
-
 		$grey-lighter: hsl(0, 0%, 86%) !default
 		$table-cell-border: 1px solid $grey-lighter !default
 		$table-cell-border-width: 0 0 1px !default
-
 		@media screen and (max-width: 800px)
 		  .is-responsive
 			width: 100%
@@ -43,23 +39,18 @@
 			border-spacing: 0
 			display: block
 			position: relative
-
 			td:empty:before
 			  content: '\00a0'
-
 			th,
 			td
 			  margin: 0
 			  vertical-align: top
-
 			th
 			  text-align: left
-
 			thead
 			  border-right: solid 2px $grey-lighter
 			  display: block
 			  float: left
-
 			  tr
 				display: block
 				padding: 0 10px 0 0
@@ -69,7 +60,6 @@
 			  td,
 			  th
 				border-width: 0 0 1px
-
 			tbody
 			  display: block
 			  width: auto
@@ -80,7 +70,6 @@
 			  tr
 				display: inline-block
 				vertical-align: top
-
 			th
 			  display: block
 			  text-align: right
@@ -89,18 +78,15 @@
 			  display: block
 			  min-height: 1.25em
 			  text-align: left
-
 			th,
 			td
 			  &:last-child
 				border-bottom-width: 0
-
 			tr
 			  &:last-child
 				td:not(:last-child)
 				  border: $table-cell-border
 				  border-width: $table-cell-border-width
-
 			&.is-bordered
 			  td,
 			  th
@@ -114,7 +100,6 @@
 				  td,
 				  th
 					border-width: 1px	
-			
 		</style>
 	</head>
 	<body>
@@ -159,7 +144,6 @@
 			</span>
 		</div>
 		<div class="is-divider div1"></div>
-
 		<!--seller logo or icon-->	
 		<div class="columns">
 			<div class="column is-3">
@@ -229,7 +213,6 @@
 			<h5> 
 				[Auto Full Name input]]
 			</h5>
-
 			</div>
 			<div class="column is-half is-size-7 has-text-weight-semibold">
 				[Location] City or Country
@@ -253,7 +236,6 @@
 				</h5>
 			</div>
 		</div>
-		
 		<div class="columns">
 			<div class="column is-half is-size-7 has-text-weight-semibold">
 				Website (Optional)
@@ -270,65 +252,57 @@
 			</a>
 			</div>
 		</div>
-		
 		<!--NEW PAGE  CHANGING PASSWORD -->
 		<div class="column is-6 is-offset-3"> 
+			<div class="has-text-weight-semibold">
+				<strong class="is-size-5 has-text-primary">
+					Changing or Updating Password
+				</strong> 
+			</div><hr/>
+			<!--NEW PAGE  CHANGING PASSWORD -->
+			<!--current password -->	
+			<div class="field">
+				<label class="label">
+					Current Password
+				</label>
+				 <div class="control">
+				<input class="input" type="text" placeholder="e.g Enter your current Password">
+				 </div>
+			</div>
+			<!--new password -->	
+					<div class="field">
+				<label class="label">
+					New Password
+				</label>
+				 <div class="control">
+				<input class="input" type="text" placeholder="e.g Enter your new Password">
+				 </div>
+			</div>
+			<!--retype new password -->	
+					<div class="field">
+				<label class="label">
+					Re-Type New Password
+				</label>
+				 <div class="control">
+				<input class="input" type="text" placeholder="e.g Re-Type Your New Password">
+				 </div>
+			</div>
+			<!--submit button -->	
+			<div class="control has-text-right">
+			<button class="button is-primary is-small has-text-weight-semibold">
+				Submit and Update Password
+			</button>
+			</div>
+		</div>
+		<!--NEW PAGE  CHANGING PASSWORD -->
 		<div class="has-text-weight-semibold">
 			<strong class="is-size-5 has-text-primary">
-				Changing or Updating Password
-			</strong> 
-		</div><hr/>
-
-		<!--NEW PAGE  CHANGING PASSWORD -->
-		<!--current password -->	
-		<div class="field">
-			<label class="label">
-				Current Password
-			</label>
-			 <div class="control">
-			<input class="input" type="text" placeholder="e.g Enter your current Password">
-			 </div>
-		</div>
-
-		<!--new password -->	
-				<div class="field">
-			<label class="label">
-				New Password
-			</label>
-			 <div class="control">
-			<input class="input" type="text" placeholder="e.g Enter your new Password">
-			 </div>
-		</div>
-		<!--retype new password -->	
-				<div class="field">
-			<label class="label">
-				Re-Type New Password
-			</label>
-			 <div class="control">
-			<input class="input" type="text" placeholder="e.g Re-Type Your New Password">
-			 </div>
-		</div>
-		<!--submit button -->	
-		<div class="control has-text-right">
-		<button class="button is-primary is-small has-text-weight-semibold">
-			Submit and Update Password
-		</button>
-		</div>
-		</div>
-	
-	
-		<!--NEW PAGE  CHANGING PASSWORD -->
-		
-		<div class="has-text-weight-semibold">
-			<strong class="is-size-5 has-text-primary">
-				My Current  Products and Subscriptions
+				My Subscription and Billing
 			</strong>
-			<div class="is-divider div1"></div>
+			<div class="is-divider div1">
 		</div>
-		
 		<div class="columns">
-		
-			  <div class="column is-one-third">
+			<div class="column is-one-third">
 				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
 						Next Payment  Due
 					<br>
@@ -337,9 +311,8 @@
 					</span>
 					</br>
 				</div>
-			  </div>
-		  
-			  <div class="column is-one-third">
+			</div>
+			<div class="column is-one-third">
 				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
 						Current Subscription 
 					<br>
@@ -348,9 +321,8 @@
 					</span>
 					</br>
 				</div>
-			  </div>
-			  
-			  <div class="column is-one-third">
+			</div>
+			<div class="column is-one-third">
 				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
 						Next payment
 					<br>
@@ -359,296 +331,35 @@
 					</span>
 					</br>
 				</div>
-			  </div>
-		</div>		
-			<!--second row-->	
-	
-			<div class="columns">
-			  
-				  <div class="column is-one-third">
-				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
-							No. of Product Eligible
-						<br>
-						<span class="is-size-7 has-text-primary has-text-weight-semibold">
-							[10]
-						</span>
-						</br>
-					</div>
-				  </div>
-				  
-				  
-				<!--No. of Ads Eligible-->  
-				<div class="column is-one-third">
-					<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
-						No. of Ads Eligible
-					<br>
-					<span class="is-size-7 has-text-primary has-text-weight-semibold">
-						[3]
-					</span>
-					</br>
-					</div>
-				</div>
-
 			</div>
-			
-		
-			<div class="has-text-weight-semibold">
-			<strong class="is-size-5 has-text-primary">
-				My Current  Products and Subscriptions
-			</strong>
-			<div class="is-divider div1"></div>
-
-		<table class="table is-responsive is-fullwidth is-size-7 table is-striped">
-				
-			<thead>
-				<!--Table  - Title 1-->
-				<tr>
-				
-					<th><span class ="has-text-grey-darker">
-						My Product Description
-					</th>
-						
-					<!--Table  - Title 2-->	
-						
-					<th><span class ="has-text-grey-darker">
-						Subscription
-					</span><br/>
-					
-					<span class ="has-text-grey">
-						Max. 10 Products
-					</span><br/>
-					
-					<span class ="has-text-danger">
-						Free $0.00
-					</span><br/>
-					</th>
-			
-					<!--Table  - Title 3-->	
-						
-					<th><span class ="has-text-grey-darker">
-						Subscription
-					</span><br/>
-					
-					<span class ="has-text-grey">
-						11-20 products
-					</span><br/>
-					
-					<span class ="has-text-danger">
-						$10.00
-					</span><br/>
-					</th>
-			
-					<!--Table  - Title 4-->	
-						
-					<th><span class ="has-text-primary">
-						Ad Package
-					</span><br/>
-					
-					<span class ="has-text-grey">
-						Max. 3 Products
-					</span><br/>
-					
-					<span class ="has-text-danger">
-						$10.00
-					</span><br/>
-					</th>			
-					
-
-					<!--Table  - Title 5-->	
-						
-					<th><span class ="has-text-primary">
-						Ad Package
-					</span><br/>
-					
-					<span class ="has-text-grey">
-						Max. 10 Products
-					</span><br/>
-					
-					<span class ="has-text-danger">
-						$40.00
-					</span><br/>
-					</th>								
-				
-				</tr>
-			</thead>
-				
-				
-				
-		<!--Table  - Body Contents 1-->			
-				
-			<tbody>
-				<tr>
-				
-					<td>
-						Mozzbi Pizza Cutter
-					</td>
-					
-					<td>
-						<i class="fa fa-check has-text-success"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-	
-				</tr>
-				  
-		<!--Table  - Body Contents 2-->	
-
-				<tr>
-				
-					<td>
-						Mozzbi Pizza Cutter
-					</td>
-					
-					<td>
-						<i class="fa fa-check has-text-success"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-	
-				</tr>		
-	
-		<!--Table  - Body Contents 3-->	
-				
-				<tr>
-				
-					<td>
-						Mozzbi Pizza Cutter
-					</td>
-					
-					<td>
-						<i class="fa fa-check has-text-success"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-	
-				</tr>				
-			
-		<!--Table  - Body Contents 4-->	
-						
-						
-				<tr>
-				
-					<td>
-						Mozzbi Pizza Cutter
-					</td>
-					
-					<td>
-						<i class="fa fa-check has-text-success"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-	
-				</tr>						
-					
-		<!--Table  - Body Contents 5-->	
-								
-				<tr>
-					<td>
-						Mozzbi Pizza Cutter
-					</td>
-					
-					<td>
-						<i class="fa fa-check has-text-success"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-				</tr>								
-									
-		<!--Table  - Body Contents 6-->	
-				  
-				<tr>
-				
-					<td>
-						Mozzbi Pizza Cutter
-					</td>
-					
-					<td>
-						<i class="fa fa-check has-text-success"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-					
-					<td>
-						<i class="fa fa-times has-text-danger"></i>
-					</td>
-	
-				</tr>
-		  
-				  
-			</tbody>
-		</table>
-
-			</div>	<hr/>
-			<!--Upgrade subscription button-->
-			
-			<div class="control has-text-right">
-				<button class="button is-dark is-small has-text-weight-semibold">
-					Upgrade Subscription
-				</button>
-			</div>	
-			
-			
-		<span class="has-text-primary is-size-7 has-text-weight-bold">
-			IMPORTANT NOTES:
-		</span>	
+		</div>		
+		<!--second row-->	
+		<div class="columns">
+			<div class="column is-one-third">
+			<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+					No. of Product Eligible
+				<br>
+				<span class="is-size-7 has-text-primary has-text-weight-semibold">
+					[10]
+				</span>
+				</br>
+			</div>
+			</div>
+			<!--No. of Ads Eligible-->  
+			<div class="column is-one-third">			
+				<div class="column is-size-7 has-text-centered has-text-grey has-text-weight-bold">
+					No. of Ads Eligible
+				<br>
+				<span class="is-size-7 has-text-primary has-text-weight-semibold">
+					[3]
+				</span>
+				</br>
+				</div>
+			</div>
+		</div>
+		<div class="is-divider has-text-weight-bold" data-content="IMPORTANT NOTES"></div>
 		<span class="is-size-7 has-text-weight-semibold has-text-justified">
-			<br/>1. All subscription and packages are based on 28 days period.
+				1. All subscription and packages are based on 28 days period.
 			<br/>2. All products under <strong>FREE subscription</strong> is only visible under category and customer search results however you're product may appear under ad pages/section as a complementary.
 			<br/>3. If you wish your to get maximum exposure for your product, please subscribe to out ads packages.
 		</span>	
